@@ -1,0 +1,74 @@
+/root/miniconda3/lib/python3.12/site-packages/muon/_core/preproc.py:32: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+  if Version(scanpy.__version__) < Version("1.10"):
+[uqc-nofilter] purged stale cache /root/pe-virtual-protein/dgat_work_uniformqc/pyg_pred_A1LN_holdout_tonsil
+[uqc-nofilter] purged stale cache /root/pe-virtual-protein/dgat_work_uniformqc/pyg_pred_A1TNSL_holdout_tonsil
+[uqc-nofilter] purged stale cache /root/pe-virtual-protein/dgat_work_uniformqc/pyg_pred_D1LN_holdout_tonsil
+[uqc-nofilter] purged stale cache /root/pe-virtual-protein/dgat_work_uniformqc/pyg_pred_D1TNSL_holdout_tonsil
+[uqc-nofilter] purged stale cache /root/pe-virtual-protein/dgat_work_uniformqc/pyg_pred_A1LN_holdout_breast_cancer
+[uqc-nofilter] purged stale cache /root/pe-virtual-protein/dgat_work_uniformqc/pyg_pred_A1TNSL_holdout_breast_cancer
+[uqc-nofilter] purged stale cache /root/pe-virtual-protein/dgat_work_uniformqc/pyg_pred_D1LN_holdout_breast_cancer
+[uqc-nofilter] purged stale cache /root/pe-virtual-protein/dgat_work_uniformqc/pyg_pred_D1TNSL_holdout_breast_cancer
+device: cuda
+restored holdout_tonsil: genes=12893 proteins=31 from /root/pe-virtual-protein/dgat_work_uniformqc/DGAT_models/12893_gene_31_protein__holdout_tonsil
+restored holdout_breast_cancer: genes=12893 proteins=31 from /root/pe-virtual-protein/dgat_work_uniformqc/DGAT_models/12893_gene_31_protein__holdout_breast_cancer
+
+########## PREDICT fold=holdout_tonsil ##########
+[uqc-nofilter] preprocess_ST: kept all 3394 spots
+filled 9931 genes -> 13931 vars
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'gse_A1LN_holdout_tonsil'
+Dataset ready
+[holdout_tonsil          |A1LN    ] n= 3394/ 3394 SP=+0.160 PC=+0.137 spotPC=-0.115 base=+0.096
+[uqc-nofilter] preprocess_ST: kept all 4329 spots
+filled 9931 genes -> 13931 vars
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'gse_A1TNSL_holdout_tonsil'
+Dataset ready
+[holdout_tonsil          |A1TNSL  ] n= 4329/ 4329 SP=+0.292 PC=+0.243 spotPC=+0.103 base=+0.226
+[uqc-nofilter] preprocess_ST: kept all 3024 spots
+filled 9931 genes -> 13931 vars
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'gse_D1LN_holdout_tonsil'
+Dataset ready
+[holdout_tonsil          |D1LN    ] n= 3024/ 3024 SP=+0.180 PC=+0.183 spotPC=-0.184 base=+0.081
+[uqc-nofilter] preprocess_ST: kept all 4503 spots
+filled 9931 genes -> 13931 vars
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'gse_D1TNSL_holdout_tonsil'
+Dataset ready
+[holdout_tonsil          |D1TNSL  ] n= 4503/ 4503 SP=+0.275 PC=+0.243 spotPC=+0.097 base=+0.215
+
+########## PREDICT fold=holdout_breast_cancer ##########
+[uqc-nofilter] preprocess_ST: kept all 3394 spots
+filled 9931 genes -> 13931 vars
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'gse_A1LN_holdout_breast_cancer'
+Dataset ready
+[holdout_breast_cancer   |A1LN    ] n= 3394/ 3394 SP=+0.130 PC=+0.103 spotPC=-0.129 base=+0.096
+[uqc-nofilter] preprocess_ST: kept all 4329 spots
+filled 9931 genes -> 13931 vars
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'gse_A1TNSL_holdout_breast_cancer'
+Dataset ready
+[holdout_breast_cancer   |A1TNSL  ] n= 4329/ 4329 SP=+0.359 PC=+0.306 spotPC=+0.227 base=+0.226
+[uqc-nofilter] preprocess_ST: kept all 3024 spots
+filled 9931 genes -> 13931 vars
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'gse_D1LN_holdout_breast_cancer'
+Dataset ready
+[holdout_breast_cancer   |D1LN    ] n= 3024/ 3024 SP=+0.170 PC=+0.172 spotPC=-0.220 base=+0.081
+[uqc-nofilter] preprocess_ST: kept all 4503 spots
+filled 9931 genes -> 13931 vars
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'gse_D1TNSL_holdout_breast_cancer'
+Dataset ready
+[holdout_breast_cancer   |D1TNSL  ] n= 4503/ 4503 SP=+0.352 PC=+0.324 spotPC=+0.225 base=+0.215
+
+=== summary (per fold, mean over 4 samples) ===
+                       spearman_mean  pearson_mean  spot_pearson_mean  namesake_spearman_mean
+fold                                                                                         
+holdout_breast_cancer         0.2526        0.2261             0.0257                  0.1546
+holdout_tonsil                0.2268        0.2014            -0.0247                  0.1546
+DGAT_RUN_DONE
+
+UQC_NOFILTER_DONE

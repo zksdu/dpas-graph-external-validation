@@ -1,0 +1,750 @@
+/root/miniconda3/lib/python3.12/site-packages/muon/_core/preproc.py:32: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+  if Version(scanpy.__version__) < Version("1.10"):
+
+########## [uqc] TRAIN FOLD holdout_tonsil (train=breast_cancer) ##########
+[uqc] raw: breast_cancer (4169, 18085) | tonsil (4194, 18085)
+Common genes before QC: 18085
+Common proteins before QC: 35
+Num of encoding genes: 30
+[uqc] qc_control_cytassist: requested min_genes=700 -> forced 500
+/root/miniconda3/lib/python3.12/site-packages/numba/np/ufunc/parallel.py:373: NumbaWarning: The TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.
+  warnings.warn(problem)
+/root/pe-virtual-protein/DGAT_baseline/utils/Preprocessing.py:51: ImplicitModificationWarning: Setting element `.layers['raw']` of view, initializing view as actual.
+  adata.layers['raw'] = adata.X.copy()
+/root/pe-virtual-protein/DGAT_baseline/utils/Preprocessing.py:52: ImplicitModificationWarning: Setting element `.layers['raw']` of view, initializing view as actual.
+  pdata.layers['raw'] = pdata.X.copy()
+[uqc] after QC: rna (4164, 12916), prot (4164, 31)
+/root/miniconda3/lib/python3.12/functools.py:909: UserWarning: zero-centering a sparse array/matrix densifies it.
+  return dispatch(args[0].__class__)(*args, **kw)
+/root/miniconda3/lib/python3.12/site-packages/muon/_prot/preproc.py:267: UserWarning: adata.X is sparse but not in CSC format. CSC format required for `axis=0`. Converting to CSC.
+  warn(
+[uqc] qc_control_cytassist: requested min_genes=700 -> forced 500
+/root/pe-virtual-protein/DGAT_baseline/utils/Preprocessing.py:51: ImplicitModificationWarning: Setting element `.layers['raw']` of view, initializing view as actual.
+  adata.layers['raw'] = adata.X.copy()
+/root/pe-virtual-protein/DGAT_baseline/utils/Preprocessing.py:52: ImplicitModificationWarning: Setting element `.layers['raw']` of view, initializing view as actual.
+  pdata.layers['raw'] = pdata.X.copy()
+[uqc] after QC: rna (4191, 17434), prot (4191, 31)
+/root/miniconda3/lib/python3.12/functools.py:909: UserWarning: zero-centering a sparse array/matrix densifies it.
+  return dispatch(args[0].__class__)(*args, **kw)
+/root/miniconda3/lib/python3.12/site-packages/muon/_prot/preproc.py:267: UserWarning: adata.X is sparse but not in CSC format. CSC format required for `axis=0`. Converting to CSC.
+  warn(
+Common genes after QC: 12893
+Common proteins after QC: 31
+Common gene names saved to ./resources/common_gene_12893.txt
+Common protein names saved to ./resources/common_protein_31.txt
+Common genes: 12893
+Common proteins: 31
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'breast_cancer_holdout_tonsil'
+Dataset ready
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'tonsil_holdout_tonsil'
+Dataset ready
+Using single device for both models
+Epoch 1/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 1/100: 100%|██████████| 1/1 [00:00<00:00,  1.61it/s]                                                          Epoch [1/100] Total Loss: 12.9833 | mRNA Recon: 1.3306 | Protein Recon: 0.9302 | Alignment: 1.2780 | Protein Pred: 0.9312 | mRNA Pred: 1.3285
+Test Loss: 15.5945
+Protein-wise Spearman: Mean = 0.1222, Std = 0.2808, Median = 0.1512
+Cell-wise Spearman: Mean = 0.0945, Std = 0.1687, Median = 0.0952
+Number of cells with low variation: 0
+Epoch 1: EB evidence = -1.2052
+Epoch 2/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 2/100: 100%|██████████| 1/1 [00:00<00:00,  4.83it/s]                                                          Epoch [2/100] Total Loss: 11.1055 | mRNA Recon: 1.3007 | Protein Recon: 0.5870 | Alignment: 1.0406 | Protein Pred: 0.5600 | mRNA Pred: 1.2941
+Test Loss: 14.3062
+Protein-wise Spearman: Mean = 0.1512, Std = 0.2534, Median = 0.1893
+Cell-wise Spearman: Mean = 0.0854, Std = 0.1927, Median = 0.0980
+Number of cells with low variation: 0
+Epoch 2: EB evidence = -0.5569
+Epoch 3/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 3/100: 100%|██████████| 1/1 [00:00<00:00,  4.79it/s]                                                          Epoch [3/100] Total Loss: 10.0668 | mRNA Recon: 1.2627 | Protein Recon: 0.4527 | Alignment: 0.7749 | Protein Pred: 0.4223 | mRNA Pred: 1.2590
+Test Loss: 13.5333
+Protein-wise Spearman: Mean = 0.1598, Std = 0.3062, Median = 0.1706
+Cell-wise Spearman: Mean = 0.1021, Std = 0.2279, Median = 0.1206
+Number of cells with low variation: 0
+Epoch 3: EB evidence = -2.5952
+Epoch 4/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 4/100: 100%|██████████| 1/1 [00:00<00:00,  4.56it/s]                                                          Epoch [4/100] Total Loss: 9.4555 | mRNA Recon: 1.2262 | Protein Recon: 0.3912 | Alignment: 0.6184 | Protein Pred: 0.3625 | mRNA Pred: 1.2275
+Test Loss: 13.0837
+Protein-wise Spearman: Mean = 0.1536, Std = 0.3073, Median = 0.1883
+Cell-wise Spearman: Mean = 0.1220, Std = 0.1940, Median = 0.1270
+Number of cells with low variation: 0
+Epoch 4: EB evidence = 1.0628
+Epoch 5/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 5/100: 100%|██████████| 1/1 [00:00<00:00,  4.24it/s]                                                          Epoch [5/100] Total Loss: 9.0601 | mRNA Recon: 1.1886 | Protein Recon: 0.3665 | Alignment: 0.5522 | Protein Pred: 0.3342 | mRNA Pred: 1.1956
+Test Loss: 12.6819
+Protein-wise Spearman: Mean = 0.1340, Std = 0.3186, Median = 0.0859
+Cell-wise Spearman: Mean = 0.1433, Std = 0.2038, Median = 0.1613
+Number of cells with low variation: 0
+Epoch 5: EB evidence = 0.5754
+Epoch 6/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 6/100: 100%|██████████| 1/1 [00:00<00:00,  4.16it/s]                                                          Epoch [6/100] Total Loss: 8.7507 | mRNA Recon: 1.1528 | Protein Recon: 0.3547 | Alignment: 0.5212 | Protein Pred: 0.3166 | mRNA Pred: 1.1607
+Test Loss: 12.3536
+Protein-wise Spearman: Mean = 0.1129, Std = 0.3367, Median = 0.0732
+Cell-wise Spearman: Mean = 0.1362, Std = 0.1940, Median = 0.1581
+Number of cells with low variation: 0
+Epoch 6: EB evidence = -inf
+Epoch 7/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 7/100: 100%|██████████| 1/1 [00:00<00:00,  4.65it/s]                                                          Epoch [7/100] Total Loss: 8.4909 | mRNA Recon: 1.1207 | Protein Recon: 0.3461 | Alignment: 0.4980 | Protein Pred: 0.3056 | mRNA Pred: 1.1264
+Test Loss: 12.0837
+Protein-wise Spearman: Mean = 0.0983, Std = 0.3418, Median = 0.0670
+Cell-wise Spearman: Mean = 0.1463, Std = 0.1955, Median = 0.1585
+Number of cells with low variation: 0
+Epoch 7: EB evidence = 0.5939
+Epoch 8/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 8/100: 100%|██████████| 1/1 [00:00<00:00,  3.85it/s]                                                          Epoch [8/100] Total Loss: 8.2518 | mRNA Recon: 1.0918 | Protein Recon: 0.3345 | Alignment: 0.4788 | Protein Pred: 0.2947 | mRNA Pred: 1.0957
+Test Loss: 11.8730
+Protein-wise Spearman: Mean = 0.1072, Std = 0.3295, Median = 0.0567
+Cell-wise Spearman: Mean = 0.1581, Std = 0.2058, Median = 0.1742
+Number of cells with low variation: 0
+Epoch 8: EB evidence = 5.2680
+Epoch 9/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 9/100: 100%|██████████| 1/1 [00:00<00:00,  4.40it/s]                                                          Epoch [9/100] Total Loss: 8.0428 | mRNA Recon: 1.0670 | Protein Recon: 0.3218 | Alignment: 0.4600 | Protein Pred: 0.2852 | mRNA Pred: 1.0702
+Test Loss: 11.7197
+Protein-wise Spearman: Mean = 0.1265, Std = 0.3198, Median = 0.0755
+Cell-wise Spearman: Mean = 0.1689, Std = 0.2136, Median = 0.1940
+Number of cells with low variation: 0
+Epoch 9: EB evidence = 0.5936
+Epoch 10/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 10/100: 100%|██████████| 1/1 [00:00<00:00,  3.55it/s]                                                           Epoch [10/100] Total Loss: 7.8683 | mRNA Recon: 1.0476 | Protein Recon: 0.3067 | Alignment: 0.4408 | Protein Pred: 0.2776 | mRNA Pred: 1.0501
+Test Loss: 11.6377
+Protein-wise Spearman: Mean = 0.1376, Std = 0.3147, Median = 0.0987
+Cell-wise Spearman: Mean = 0.1722, Std = 0.2225, Median = 0.1988
+Number of cells with low variation: 0
+Epoch 10: Learning rate reduced.
+Epoch 10: EB evidence = 0.2677
+Epoch 11/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 11/100: 100%|██████████| 1/1 [00:00<00:00,  4.74it/s]                                                           Epoch [11/100] Total Loss: 7.7359 | mRNA Recon: 1.0343 | Protein Recon: 0.2929 | Alignment: 0.4227 | Protein Pred: 0.2709 | mRNA Pred: 1.0363
+Test Loss: 11.6199
+Protein-wise Spearman: Mean = 0.1414, Std = 0.3084, Median = 0.1083
+Cell-wise Spearman: Mean = 0.1708, Std = 0.2292, Median = 0.1980
+Number of cells with low variation: 0
+Epoch 11: EB evidence = 0.9004
+Epoch 12/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 12/100: 100%|██████████| 1/1 [00:00<00:00,  3.42it/s]                                                           Epoch [12/100] Total Loss: 7.6585 | mRNA Recon: 1.0280 | Protein Recon: 0.2846 | Alignment: 0.4082 | Protein Pred: 0.2655 | mRNA Pred: 1.0294
+Test Loss: 11.6254
+Protein-wise Spearman: Mean = 0.1407, Std = 0.3022, Median = 0.1061
+Cell-wise Spearman: Mean = 0.1748, Std = 0.2288, Median = 0.2036
+Number of cells with low variation: 0
+Epoch 12: EB evidence = 0.8235
+Epoch 13/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 13/100: 100%|██████████| 1/1 [00:00<00:00,  4.74it/s]                                                           Epoch [13/100] Total Loss: 7.6025 | mRNA Recon: 1.0246 | Protein Recon: 0.2788 | Alignment: 0.3953 | Protein Pred: 0.2601 | mRNA Pred: 1.0254
+Test Loss: 11.6407
+Protein-wise Spearman: Mean = 0.1405, Std = 0.2947, Median = 0.1025
+Cell-wise Spearman: Mean = 0.1802, Std = 0.2239, Median = 0.2113
+Number of cells with low variation: 0
+Epoch 13: EB evidence = 1.0076
+Epoch 14/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 14/100: 100%|██████████| 1/1 [00:00<00:00,  3.55it/s]                                                           Epoch [14/100] Total Loss: 7.5654 | mRNA Recon: 1.0230 | Protein Recon: 0.2747 | Alignment: 0.3834 | Protein Pred: 0.2562 | mRNA Pred: 1.0234
+Test Loss: 11.6644
+Protein-wise Spearman: Mean = 0.1422, Std = 0.2857, Median = 0.1022
+Cell-wise Spearman: Mean = 0.1841, Std = 0.2211, Median = 0.2177
+Number of cells with low variation: 0
+Epoch 14: EB evidence = 0.6150
+Epoch 15/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 15/100: 100%|██████████| 1/1 [00:00<00:00,  4.77it/s]                                                           Epoch [15/100] Total Loss: 7.5363 | mRNA Recon: 1.0222 | Protein Recon: 0.2722 | Alignment: 0.3725 | Protein Pred: 0.2528 | mRNA Pred: 1.0222
+Test Loss: 11.6859
+Protein-wise Spearman: Mean = 0.1448, Std = 0.2781, Median = 0.1032
+Cell-wise Spearman: Mean = 0.1859, Std = 0.2253, Median = 0.2222
+Number of cells with low variation: 0
+Epoch 15: EB evidence = 1.1017
+Epoch 16/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 16/100: 100%|██████████| 1/1 [00:00<00:00,  4.58it/s]                                                           Epoch [16/100] Total Loss: 7.5031 | mRNA Recon: 1.0208 | Protein Recon: 0.2694 | Alignment: 0.3626 | Protein Pred: 0.2487 | mRNA Pred: 1.0209
+Test Loss: 11.6873
+Protein-wise Spearman: Mean = 0.1474, Std = 0.2727, Median = 0.0934
+Cell-wise Spearman: Mean = 0.1879, Std = 0.2327, Median = 0.2254
+Number of cells with low variation: 0
+Epoch 16: EB evidence = 0.8550
+Epoch 17/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 17/100: 100%|██████████| 1/1 [00:00<00:00,  4.54it/s]                                                           Epoch [17/100] Total Loss: 7.4667 | mRNA Recon: 1.0186 | Protein Recon: 0.2659 | Alignment: 0.3529 | Protein Pred: 0.2453 | mRNA Pred: 1.0188
+Test Loss: 11.6665
+Protein-wise Spearman: Mean = 0.1491, Std = 0.2699, Median = 0.1054
+Cell-wise Spearman: Mean = 0.1904, Std = 0.2390, Median = 0.2298
+Number of cells with low variation: 0
+Epoch 17: EB evidence = 0.8215
+Epoch 18/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 18/100: 100%|██████████| 1/1 [00:00<00:00,  3.81it/s]                                                           Epoch [18/100] Total Loss: 7.4252 | mRNA Recon: 1.0155 | Protein Recon: 0.2620 | Alignment: 0.3436 | Protein Pred: 0.2420 | mRNA Pred: 1.0162
+Test Loss: 11.6430
+Protein-wise Spearman: Mean = 0.1517, Std = 0.2673, Median = 0.1065
+Cell-wise Spearman: Mean = 0.1919, Std = 0.2418, Median = 0.2282
+Number of cells with low variation: 0
+Epoch 18: EB evidence = 0.9122
+Epoch 19/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 19/100: 100%|██████████| 1/1 [00:00<00:00,  4.81it/s]                                                           Epoch [19/100] Total Loss: 7.3854 | mRNA Recon: 1.0121 | Protein Recon: 0.2590 | Alignment: 0.3337 | Protein Pred: 0.2395 | mRNA Pred: 1.0133
+Test Loss: 11.6252
+Protein-wise Spearman: Mean = 0.1565, Std = 0.2641, Median = 0.1084
+Cell-wise Spearman: Mean = 0.1963, Std = 0.2419, Median = 0.2302
+Number of cells with low variation: 0
+Epoch 19: EB evidence = 1.0242
+Epoch 20/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 20/100: 100%|██████████| 1/1 [00:00<00:00,  4.38it/s]                                                           Epoch [20/100] Total Loss: 7.3444 | mRNA Recon: 1.0087 | Protein Recon: 0.2565 | Alignment: 0.3248 | Protein Pred: 0.2364 | mRNA Pred: 1.0103
+Test Loss: 11.6069
+Protein-wise Spearman: Mean = 0.1619, Std = 0.2606, Median = 0.1196
+Cell-wise Spearman: Mean = 0.2023, Std = 0.2403, Median = 0.2331
+Number of cells with low variation: 0
+Epoch 20: Learning rate reduced.
+Epoch 20: EB evidence = 1.0321
+Epoch 21/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 21/100: 100%|██████████| 1/1 [00:00<00:00,  4.03it/s]                                                           Epoch [21/100] Total Loss: 7.3086 | mRNA Recon: 1.0058 | Protein Recon: 0.2530 | Alignment: 0.3159 | Protein Pred: 0.2342 | mRNA Pred: 1.0079
+Test Loss: 11.5828
+Protein-wise Spearman: Mean = 0.1652, Std = 0.2592, Median = 0.1630
+Cell-wise Spearman: Mean = 0.2101, Std = 0.2375, Median = 0.2411
+Number of cells with low variation: 0
+Epoch 21: EB evidence = 0.9229
+Epoch 22/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 22/100: 100%|██████████| 1/1 [00:00<00:00,  4.58it/s]                                                           Epoch [22/100] Total Loss: 7.2815 | mRNA Recon: 1.0038 | Protein Recon: 0.2507 | Alignment: 0.3093 | Protein Pred: 0.2322 | mRNA Pred: 1.0061
+Test Loss: 11.5636
+Protein-wise Spearman: Mean = 0.1706, Std = 0.2583, Median = 0.1720
+Cell-wise Spearman: Mean = 0.2182, Std = 0.2368, Median = 0.2532
+Number of cells with low variation: 0
+Epoch 22: EB evidence = 0.9528
+Epoch 23/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 23/100: 100%|██████████| 1/1 [00:00<00:00,  4.60it/s]                                                           Epoch [23/100] Total Loss: 7.2538 | mRNA Recon: 1.0019 | Protein Recon: 0.2471 | Alignment: 0.3025 | Protein Pred: 0.2301 | mRNA Pred: 1.0045
+Test Loss: 11.5560
+Protein-wise Spearman: Mean = 0.1789, Std = 0.2577, Median = 0.1973
+Cell-wise Spearman: Mean = 0.2234, Std = 0.2376, Median = 0.2609
+Number of cells with low variation: 0
+Epoch 23: EB evidence = 0.9917
+Epoch 24/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 24/100: 100%|██████████| 1/1 [00:00<00:00,  4.93it/s]                                                           Epoch [24/100] Total Loss: 7.2265 | mRNA Recon: 1.0002 | Protein Recon: 0.2437 | Alignment: 0.2958 | Protein Pred: 0.2277 | mRNA Pred: 1.0030
+Test Loss: 11.5548
+Protein-wise Spearman: Mean = 0.1879, Std = 0.2574, Median = 0.2281
+Cell-wise Spearman: Mean = 0.2271, Std = 0.2382, Median = 0.2673
+Number of cells with low variation: 0
+Epoch 24: EB evidence = 0.9000
+Epoch 25/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 25/100: 100%|██████████| 1/1 [00:00<00:00,  4.74it/s]                                                           Epoch [25/100] Total Loss: 7.2037 | mRNA Recon: 0.9987 | Protein Recon: 0.2404 | Alignment: 0.2904 | Protein Pred: 0.2259 | mRNA Pred: 1.0016
+Test Loss: 11.5506
+Protein-wise Spearman: Mean = 0.1952, Std = 0.2578, Median = 0.2335
+Cell-wise Spearman: Mean = 0.2316, Std = 0.2373, Median = 0.2730
+Number of cells with low variation: 0
+Epoch 25: EB evidence = 0.9502
+Epoch 26/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 26/100: 100%|██████████| 1/1 [00:00<00:00,  4.60it/s]                                                           Epoch [26/100] Total Loss: 7.1794 | mRNA Recon: 0.9973 | Protein Recon: 0.2368 | Alignment: 0.2845 | Protein Pred: 0.2236 | mRNA Pred: 1.0004
+Test Loss: 11.5462
+Protein-wise Spearman: Mean = 0.2016, Std = 0.2584, Median = 0.2375
+Cell-wise Spearman: Mean = 0.2374, Std = 0.2358, Median = 0.2778
+Number of cells with low variation: 0
+Epoch 26: EB evidence = 0.9613
+Epoch 27/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 27/100: 100%|██████████| 1/1 [00:00<00:00,  4.48it/s]                                                           Epoch [27/100] Total Loss: 7.1570 | mRNA Recon: 0.9960 | Protein Recon: 0.2330 | Alignment: 0.2792 | Protein Pred: 0.2219 | mRNA Pred: 0.9991
+Test Loss: 11.5507
+Protein-wise Spearman: Mean = 0.2082, Std = 0.2592, Median = 0.2417
+Cell-wise Spearman: Mean = 0.2438, Std = 0.2352, Median = 0.2851
+Number of cells with low variation: 0
+Epoch 27: EB evidence = 0.9787
+Epoch 28/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 28/100: 100%|██████████| 1/1 [00:00<00:00,  4.85it/s]                                                           Epoch [28/100] Total Loss: 7.1337 | mRNA Recon: 0.9947 | Protein Recon: 0.2294 | Alignment: 0.2747 | Protein Pred: 0.2194 | mRNA Pred: 0.9979
+Test Loss: 11.5545
+Protein-wise Spearman: Mean = 0.2143, Std = 0.2608, Median = 0.2428
+Cell-wise Spearman: Mean = 0.2512, Std = 0.2356, Median = 0.2935
+Number of cells with low variation: 0
+Epoch 28: EB evidence = 0.9217
+Epoch 29/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 29/100: 100%|██████████| 1/1 [00:00<00:00,  4.24it/s]                                                           Epoch [29/100] Total Loss: 7.1118 | mRNA Recon: 0.9933 | Protein Recon: 0.2261 | Alignment: 0.2704 | Protein Pred: 0.2174 | mRNA Pred: 0.9964
+Test Loss: 11.5470
+Protein-wise Spearman: Mean = 0.2187, Std = 0.2640, Median = 0.2398
+Cell-wise Spearman: Mean = 0.2607, Std = 0.2350, Median = 0.3052
+Number of cells with low variation: 0
+Epoch 29: EB evidence = 0.9525
+Epoch 30/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 30/100: 100%|██████████| 1/1 [00:00<00:00,  4.91it/s]                                                           Epoch [30/100] Total Loss: 7.0879 | mRNA Recon: 0.9918 | Protein Recon: 0.2230 | Alignment: 0.2666 | Protein Pred: 0.2147 | mRNA Pred: 0.9949
+Test Loss: 11.5335
+Protein-wise Spearman: Mean = 0.2225, Std = 0.2681, Median = 0.2332
+Cell-wise Spearman: Mean = 0.2709, Std = 0.2324, Median = 0.3133
+Number of cells with low variation: 0
+Epoch 30: Learning rate reduced.
+Epoch 30: EB evidence = 0.9642
+Epoch 31/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 31/100: 100%|██████████| 1/1 [00:00<00:00,  4.87it/s]                                                           Epoch [31/100] Total Loss: 7.0667 | mRNA Recon: 0.9904 | Protein Recon: 0.2198 | Alignment: 0.2630 | Protein Pred: 0.2128 | mRNA Pred: 0.9934
+Test Loss: 11.5287
+Protein-wise Spearman: Mean = 0.2261, Std = 0.2713, Median = 0.2279
+Cell-wise Spearman: Mean = 0.2753, Std = 0.2305, Median = 0.3157
+Number of cells with low variation: 0
+Epoch 31: EB evidence = 1.0086
+Epoch 32/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 32/100: 100%|██████████| 1/1 [00:00<00:00,  4.11it/s]                                                           Epoch [32/100] Total Loss: 7.0491 | mRNA Recon: 0.9892 | Protein Recon: 0.2181 | Alignment: 0.2604 | Protein Pred: 0.2108 | mRNA Pred: 0.9921
+Test Loss: 11.5262
+Protein-wise Spearman: Mean = 0.2296, Std = 0.2745, Median = 0.2217
+Cell-wise Spearman: Mean = 0.2781, Std = 0.2292, Median = 0.3190
+Number of cells with low variation: 0
+Epoch 32: EB evidence = 0.9296
+Epoch 33/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 33/100: 100%|██████████| 1/1 [00:00<00:00,  4.78it/s]                                                           Epoch [33/100] Total Loss: 7.0331 | mRNA Recon: 0.9880 | Protein Recon: 0.2158 | Alignment: 0.2574 | Protein Pred: 0.2098 | mRNA Pred: 0.9908
+Test Loss: 11.5214
+Protein-wise Spearman: Mean = 0.2325, Std = 0.2778, Median = 0.2148
+Cell-wise Spearman: Mean = 0.2822, Std = 0.2281, Median = 0.3242
+Number of cells with low variation: 0
+Epoch 33: EB evidence = 0.9907
+Epoch 34/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 34/100: 100%|██████████| 1/1 [00:00<00:00,  4.39it/s]                                                           Epoch [34/100] Total Loss: 7.0164 | mRNA Recon: 0.9867 | Protein Recon: 0.2147 | Alignment: 0.2544 | Protein Pred: 0.2081 | mRNA Pred: 0.9894
+Test Loss: 11.5147
+Protein-wise Spearman: Mean = 0.2346, Std = 0.2812, Median = 0.2096
+Cell-wise Spearman: Mean = 0.2876, Std = 0.2275, Median = 0.3270
+Number of cells with low variation: 0
+Epoch 34: EB evidence = 0.9762
+Epoch 35/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 35/100: 100%|██████████| 1/1 [00:00<00:00,  4.84it/s]                                                           Epoch [35/100] Total Loss: 6.9991 | mRNA Recon: 0.9856 | Protein Recon: 0.2123 | Alignment: 0.2519 | Protein Pred: 0.2062 | mRNA Pred: 0.9882
+Test Loss: 11.5113
+Protein-wise Spearman: Mean = 0.2367, Std = 0.2846, Median = 0.2049
+Cell-wise Spearman: Mean = 0.2916, Std = 0.2280, Median = 0.3306
+Number of cells with low variation: 0
+Epoch 35: EB evidence = 1.0026
+Epoch 36/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 36/100: 100%|██████████| 1/1 [00:00<00:00,  3.80it/s]                                                           Epoch [36/100] Total Loss: 6.9827 | mRNA Recon: 0.9846 | Protein Recon: 0.2109 | Alignment: 0.2491 | Protein Pred: 0.2043 | mRNA Pred: 0.9869
+Test Loss: 11.5108
+Protein-wise Spearman: Mean = 0.2391, Std = 0.2876, Median = 0.2066
+Cell-wise Spearman: Mean = 0.2947, Std = 0.2293, Median = 0.3367
+Number of cells with low variation: 0
+Epoch 36: EB evidence = 0.9912
+Epoch 37/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 37/100: 100%|██████████| 1/1 [00:00<00:00,  4.53it/s]                                                           Epoch [37/100] Total Loss: 6.9673 | mRNA Recon: 0.9835 | Protein Recon: 0.2087 | Alignment: 0.2463 | Protein Pred: 0.2030 | mRNA Pred: 0.9857
+Test Loss: 11.5072
+Protein-wise Spearman: Mean = 0.2417, Std = 0.2901, Median = 0.2117
+Cell-wise Spearman: Mean = 0.2988, Std = 0.2295, Median = 0.3407
+Number of cells with low variation: 0
+Epoch 37: EB evidence = 0.9807
+Epoch 38/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 38/100: 100%|██████████| 1/1 [00:00<00:00,  4.19it/s]                                                           Epoch [38/100] Total Loss: 6.9501 | mRNA Recon: 0.9826 | Protein Recon: 0.2058 | Alignment: 0.2435 | Protein Pred: 0.2010 | mRNA Pred: 0.9846
+Test Loss: 11.5003
+Protein-wise Spearman: Mean = 0.2444, Std = 0.2920, Median = 0.2169
+Cell-wise Spearman: Mean = 0.3033, Std = 0.2282, Median = 0.3448
+Number of cells with low variation: 0
+Epoch 38: EB evidence = 0.9988
+Epoch 39/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 39/100: 100%|██████████| 1/1 [00:00<00:00,  2.83it/s]                                                           Epoch [39/100] Total Loss: 6.9350 | mRNA Recon: 0.9817 | Protein Recon: 0.2032 | Alignment: 0.2408 | Protein Pred: 0.1996 | mRNA Pred: 0.9836
+Test Loss: 11.4946
+Protein-wise Spearman: Mean = 0.2470, Std = 0.2937, Median = 0.2190
+Cell-wise Spearman: Mean = 0.3072, Std = 0.2268, Median = 0.3488
+Number of cells with low variation: 0
+Epoch 39: EB evidence = 1.0324
+Epoch 40/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 40/100: 100%|██████████| 1/1 [00:00<00:00,  4.55it/s]                                                           Epoch [40/100] Total Loss: 6.9192 | mRNA Recon: 0.9809 | Protein Recon: 0.2011 | Alignment: 0.2383 | Protein Pred: 0.1977 | mRNA Pred: 0.9825
+Test Loss: 11.4924
+Protein-wise Spearman: Mean = 0.2493, Std = 0.2952, Median = 0.2183
+Cell-wise Spearman: Mean = 0.3094, Std = 0.2261, Median = 0.3512
+Number of cells with low variation: 0
+Epoch 40: Learning rate reduced.
+Epoch 40: EB evidence = 0.8861
+Epoch 41/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 41/100: 100%|██████████| 1/1 [00:00<00:00,  4.90it/s]                                                           Epoch [41/100] Total Loss: 6.9042 | mRNA Recon: 0.9800 | Protein Recon: 0.1989 | Alignment: 0.2356 | Protein Pred: 0.1960 | mRNA Pred: 0.9816
+Test Loss: 11.4896
+Protein-wise Spearman: Mean = 0.2512, Std = 0.2959, Median = 0.2178
+Cell-wise Spearman: Mean = 0.3122, Std = 0.2252, Median = 0.3544
+Number of cells with low variation: 0
+Epoch 41: EB evidence = 1.0372
+Epoch 42/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 42/100: 100%|██████████| 1/1 [00:00<00:00,  4.91it/s]                                                           Epoch [42/100] Total Loss: 6.8932 | mRNA Recon: 0.9794 | Protein Recon: 0.1969 | Alignment: 0.2334 | Protein Pred: 0.1949 | mRNA Pred: 0.9809
+Test Loss: 11.4854
+Protein-wise Spearman: Mean = 0.2530, Std = 0.2961, Median = 0.2183
+Cell-wise Spearman: Mean = 0.3164, Std = 0.2249, Median = 0.3585
+Number of cells with low variation: 0
+Epoch 42: EB evidence = 0.9829
+Epoch 43/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 43/100: 100%|██████████| 1/1 [00:00<00:00,  4.89it/s]                                                           Epoch [43/100] Total Loss: 6.8812 | mRNA Recon: 0.9788 | Protein Recon: 0.1954 | Alignment: 0.2312 | Protein Pred: 0.1934 | mRNA Pred: 0.9803
+Test Loss: 11.4802
+Protein-wise Spearman: Mean = 0.2547, Std = 0.2961, Median = 0.2198
+Cell-wise Spearman: Mean = 0.3205, Std = 0.2249, Median = 0.3633
+Number of cells with low variation: 0
+Epoch 43: EB evidence = 0.9913
+Epoch 44/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 44/100: 100%|██████████| 1/1 [00:00<00:00,  4.58it/s]                                                           Epoch [44/100] Total Loss: 6.8696 | mRNA Recon: 0.9782 | Protein Recon: 0.1939 | Alignment: 0.2294 | Protein Pred: 0.1918 | mRNA Pred: 0.9797
+Test Loss: 11.4740
+Protein-wise Spearman: Mean = 0.2564, Std = 0.2958, Median = 0.2203
+Cell-wise Spearman: Mean = 0.3243, Std = 0.2251, Median = 0.3669
+Number of cells with low variation: 0
+Epoch 44: EB evidence = 1.0052
+Epoch 45/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 45/100: 100%|██████████| 1/1 [00:00<00:00,  4.67it/s]                                                           Epoch [45/100] Total Loss: 6.8583 | mRNA Recon: 0.9776 | Protein Recon: 0.1923 | Alignment: 0.2266 | Protein Pred: 0.1908 | mRNA Pred: 0.9790
+Test Loss: 11.4701
+Protein-wise Spearman: Mean = 0.2582, Std = 0.2952, Median = 0.2234
+Cell-wise Spearman: Mean = 0.3266, Std = 0.2250, Median = 0.3685
+Number of cells with low variation: 0
+Epoch 45: EB evidence = 0.9747
+Epoch 46/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 46/100: 100%|██████████| 1/1 [00:00<00:00,  4.45it/s]                                                           Epoch [46/100] Total Loss: 6.8472 | mRNA Recon: 0.9770 | Protein Recon: 0.1917 | Alignment: 0.2249 | Protein Pred: 0.1889 | mRNA Pred: 0.9785
+Test Loss: 11.4646
+Protein-wise Spearman: Mean = 0.2602, Std = 0.2942, Median = 0.2262
+Cell-wise Spearman: Mean = 0.3292, Std = 0.2246, Median = 0.3714
+Number of cells with low variation: 0
+Epoch 46: EB evidence = 1.0344
+Epoch 47/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 47/100: 100%|██████████| 1/1 [00:00<00:00,  4.73it/s]                                                           Epoch [47/100] Total Loss: 6.8352 | mRNA Recon: 0.9765 | Protein Recon: 0.1899 | Alignment: 0.2225 | Protein Pred: 0.1874 | mRNA Pred: 0.9780
+Test Loss: 11.4587
+Protein-wise Spearman: Mean = 0.2625, Std = 0.2929, Median = 0.2297
+Cell-wise Spearman: Mean = 0.3322, Std = 0.2250, Median = 0.3738
+Number of cells with low variation: 0
+Epoch 47: EB evidence = 0.8952
+Epoch 48/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 48/100: 100%|██████████| 1/1 [00:00<00:00,  4.47it/s]                                                           Epoch [48/100] Total Loss: 6.8251 | mRNA Recon: 0.9760 | Protein Recon: 0.1884 | Alignment: 0.2207 | Protein Pred: 0.1862 | mRNA Pred: 0.9775
+Test Loss: 11.4538
+Protein-wise Spearman: Mean = 0.2652, Std = 0.2912, Median = 0.2339
+Cell-wise Spearman: Mean = 0.3362, Std = 0.2259, Median = 0.3778
+Number of cells with low variation: 0
+Epoch 48: EB evidence = 0.9690
+Epoch 49/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 49/100: 100%|██████████| 1/1 [00:00<00:00,  4.46it/s]                                                           Epoch [49/100] Total Loss: 6.8141 | mRNA Recon: 0.9755 | Protein Recon: 0.1874 | Alignment: 0.2186 | Protein Pred: 0.1845 | mRNA Pred: 0.9771
+Test Loss: 11.4502
+Protein-wise Spearman: Mean = 0.2682, Std = 0.2891, Median = 0.2377
+Cell-wise Spearman: Mean = 0.3405, Std = 0.2271, Median = 0.3823
+Number of cells with low variation: 0
+Epoch 49: EB evidence = 0.9624
+Epoch 50/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 50/100: 100%|██████████| 1/1 [00:00<00:00,  4.96it/s]                                                           Epoch [50/100] Total Loss: 6.8038 | mRNA Recon: 0.9750 | Protein Recon: 0.1853 | Alignment: 0.2166 | Protein Pred: 0.1835 | mRNA Pred: 0.9766
+Test Loss: 11.4473
+Protein-wise Spearman: Mean = 0.2717, Std = 0.2870, Median = 0.2407
+Cell-wise Spearman: Mean = 0.3445, Std = 0.2280, Median = 0.3879
+Number of cells with low variation: 0
+Epoch 50: Learning rate reduced.
+Epoch 50: EB evidence = 0.9974
+Epoch 51/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 51/100: 100%|██████████| 1/1 [00:00<00:00,  4.84it/s]                                                           Epoch [51/100] Total Loss: 6.7940 | mRNA Recon: 0.9745 | Protein Recon: 0.1842 | Alignment: 0.2146 | Protein Pred: 0.1821 | mRNA Pred: 0.9762
+Test Loss: 11.4432
+Protein-wise Spearman: Mean = 0.2743, Std = 0.2856, Median = 0.2438
+Cell-wise Spearman: Mean = 0.3474, Std = 0.2282, Median = 0.3907
+Number of cells with low variation: 0
+Epoch 51: EB evidence = 0.9920
+--> EB early stopping at epoch 51 (mean_evidence=0.9805, threshold=0.96)
+Test Loss: 11.4432
+Protein-wise Spearman: Mean = 0.2743, Std = 0.2856, Median = 0.2438
+Cell-wise Spearman: Mean = 0.3474, Std = 0.2282, Median = 0.3907
+Number of cells with low variation: 0
+Average Cell Pearson Cor in test data:  0.4386734486946256
+Average Cell Spearman Cor in test data:  0.34740725251585564
+Average Protein Cor in test data: 0.2849
+
+Average RMSE in test data: 0.3810
+
+saved model: /root/pe-virtual-protein/dgat_work_uniformqc/DGAT_models/12893_gene_31_protein__holdout_tonsil (genes=12893, proteins=31)
+
+########## [uqc] TRAIN FOLD holdout_breast_cancer (train=tonsil) ##########
+[uqc] raw: tonsil (4194, 18085) | breast_cancer (4169, 18085)
+Common genes before QC: 18085
+Common proteins before QC: 35
+Num of encoding genes: 30
+[uqc] qc_control_cytassist: requested min_genes=700 -> forced 500
+/root/pe-virtual-protein/DGAT_baseline/utils/Preprocessing.py:51: ImplicitModificationWarning: Setting element `.layers['raw']` of view, initializing view as actual.
+  adata.layers['raw'] = adata.X.copy()
+/root/pe-virtual-protein/DGAT_baseline/utils/Preprocessing.py:52: ImplicitModificationWarning: Setting element `.layers['raw']` of view, initializing view as actual.
+  pdata.layers['raw'] = pdata.X.copy()
+[uqc] after QC: rna (4191, 17434), prot (4191, 31)
+/root/miniconda3/lib/python3.12/functools.py:909: UserWarning: zero-centering a sparse array/matrix densifies it.
+  return dispatch(args[0].__class__)(*args, **kw)
+/root/miniconda3/lib/python3.12/site-packages/muon/_prot/preproc.py:267: UserWarning: adata.X is sparse but not in CSC format. CSC format required for `axis=0`. Converting to CSC.
+  warn(
+[uqc] qc_control_cytassist: requested min_genes=700 -> forced 500
+/root/pe-virtual-protein/DGAT_baseline/utils/Preprocessing.py:51: ImplicitModificationWarning: Setting element `.layers['raw']` of view, initializing view as actual.
+  adata.layers['raw'] = adata.X.copy()
+/root/pe-virtual-protein/DGAT_baseline/utils/Preprocessing.py:52: ImplicitModificationWarning: Setting element `.layers['raw']` of view, initializing view as actual.
+  pdata.layers['raw'] = pdata.X.copy()
+[uqc] after QC: rna (4164, 12916), prot (4164, 31)
+/root/miniconda3/lib/python3.12/functools.py:909: UserWarning: zero-centering a sparse array/matrix densifies it.
+  return dispatch(args[0].__class__)(*args, **kw)
+/root/miniconda3/lib/python3.12/site-packages/muon/_prot/preproc.py:267: UserWarning: adata.X is sparse but not in CSC format. CSC format required for `axis=0`. Converting to CSC.
+  warn(
+Common genes after QC: 12893
+Common proteins after QC: 31
+Common gene names saved to ./resources/common_gene_12893.txt
+Common protein names saved to ./resources/common_protein_31.txt
+Common genes: 12893
+Common proteins: 31
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'tonsil_holdout_breast_cancer'
+Dataset ready
+Creating or loading dataset
+Creating and saving preprocessed data for sample 'breast_cancer_holdout_breast_cancer'
+Dataset ready
+Using single device for both models
+Epoch 1/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 1/100: 100%|██████████| 1/1 [00:00<00:00,  3.96it/s]                                                          Epoch [1/100] Total Loss: 12.6995 | mRNA Recon: 1.3306 | Protein Recon: 0.8798 | Alignment: 1.2749 | Protein Pred: 0.8543 | mRNA Pred: 1.3288
+Test Loss: 15.5352
+Protein-wise Spearman: Mean = 0.1420, Std = 0.3547, Median = 0.1228
+Cell-wise Spearman: Mean = 0.0634, Std = 0.2274, Median = 0.0952
+Number of cells with low variation: 0
+Epoch 1: EB evidence = -1.4512
+Epoch 2/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 2/100: 100%|██████████| 1/1 [00:00<00:00,  3.46it/s]                                                          Epoch [2/100] Total Loss: 10.8192 | mRNA Recon: 1.2972 | Protein Recon: 0.5100 | Alignment: 1.0404 | Protein Pred: 0.4925 | mRNA Pred: 1.3052
+Test Loss: 14.3680
+Protein-wise Spearman: Mean = 0.2440, Std = 0.3478, Median = 0.2001
+Cell-wise Spearman: Mean = 0.1408, Std = 0.1899, Median = 0.1601
+Number of cells with low variation: 0
+Epoch 2: EB evidence = -0.5200
+Epoch 3/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 3/100: 100%|██████████| 1/1 [00:00<00:00,  4.82it/s]                                                          Epoch [3/100] Total Loss: 9.8369 | mRNA Recon: 1.2614 | Protein Recon: 0.4025 | Alignment: 0.7671 | Protein Pred: 0.3640 | mRNA Pred: 1.2682
+Test Loss: 13.6026
+Protein-wise Spearman: Mean = 0.2560, Std = 0.3654, Median = 0.2985
+Cell-wise Spearman: Mean = 0.1906, Std = 0.1874, Median = 0.1976
+Number of cells with low variation: 0
+Epoch 3: EB evidence = -0.6792
+Epoch 4/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 4/100: 100%|██████████| 1/1 [00:00<00:00,  4.91it/s]                                                          Epoch [4/100] Total Loss: 9.2368 | mRNA Recon: 1.2229 | Protein Recon: 0.3576 | Alignment: 0.6035 | Protein Pred: 0.3106 | mRNA Pred: 1.2295
+Test Loss: 13.1419
+Protein-wise Spearman: Mean = 0.2377, Std = 0.3827, Median = 0.3078
+Cell-wise Spearman: Mean = 0.1887, Std = 0.1984, Median = 0.1730
+Number of cells with low variation: 0
+Epoch 4: EB evidence = 0.9165
+Epoch 5/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 5/100: 100%|██████████| 1/1 [00:00<00:00,  4.95it/s]                                                          Epoch [5/100] Total Loss: 8.9087 | mRNA Recon: 1.1872 | Protein Recon: 0.3448 | Alignment: 0.5345 | Protein Pred: 0.3002 | mRNA Pred: 1.1929
+Test Loss: 12.7495
+Protein-wise Spearman: Mean = 0.2324, Std = 0.3899, Median = 0.2954
+Cell-wise Spearman: Mean = 0.1813, Std = 0.1798, Median = 0.1734
+Number of cells with low variation: 0
+Epoch 5: EB evidence = -0.3223
+Epoch 6/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 6/100: 100%|██████████| 1/1 [00:00<00:00,  4.97it/s]                                                          Epoch [6/100] Total Loss: 8.6367 | mRNA Recon: 1.1523 | Protein Recon: 0.3385 | Alignment: 0.5004 | Protein Pred: 0.2931 | mRNA Pred: 1.1571
+Test Loss: 12.4129
+Protein-wise Spearman: Mean = 0.2368, Std = 0.3833, Median = 0.3115
+Cell-wise Spearman: Mean = 0.1851, Std = 0.1760, Median = 0.1800
+Number of cells with low variation: 0
+Epoch 6: EB evidence = 0.7898
+Epoch 7/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 7/100: 100%|██████████| 1/1 [00:00<00:00,  4.04it/s]                                                          Epoch [7/100] Total Loss: 8.3832 | mRNA Recon: 1.1193 | Protein Recon: 0.3315 | Alignment: 0.4785 | Protein Pred: 0.2843 | mRNA Pred: 1.1234
+Test Loss: 12.1380
+Protein-wise Spearman: Mean = 0.2557, Std = 0.3754, Median = 0.3248
+Cell-wise Spearman: Mean = 0.2046, Std = 0.1739, Median = 0.1948
+Number of cells with low variation: 0
+Epoch 7: EB evidence = 4.6229
+Epoch 8/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 8/100: 100%|██████████| 1/1 [00:00<00:00,  4.82it/s]                                                          Epoch [8/100] Total Loss: 8.1582 | mRNA Recon: 1.0903 | Protein Recon: 0.3245 | Alignment: 0.4599 | Protein Pred: 0.2762 | mRNA Pred: 1.0938
+Test Loss: 11.9263
+Protein-wise Spearman: Mean = 0.2584, Std = 0.3858, Median = 0.3053
+Cell-wise Spearman: Mean = 0.2305, Std = 0.1786, Median = 0.2161
+Number of cells with low variation: 0
+Epoch 8: EB evidence = 0.9021
+Epoch 9/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 9/100: 100%|██████████| 1/1 [00:00<00:00,  4.30it/s]                                                          Epoch [9/100] Total Loss: 7.9641 | mRNA Recon: 1.0659 | Protein Recon: 0.3169 | Alignment: 0.4405 | Protein Pred: 0.2694 | mRNA Pred: 1.0689
+Test Loss: 11.7760
+Protein-wise Spearman: Mean = 0.2515, Std = 0.3968, Median = 0.2877
+Cell-wise Spearman: Mean = 0.2439, Std = 0.1952, Median = 0.2218
+Number of cells with low variation: 0
+Epoch 9: EB evidence = -0.1423
+Epoch 10/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 10/100: 100%|██████████| 1/1 [00:00<00:00,  4.11it/s]                                                           Epoch [10/100] Total Loss: 7.8059 | mRNA Recon: 1.0473 | Protein Recon: 0.3076 | Alignment: 0.4218 | Protein Pred: 0.2635 | mRNA Pred: 1.0496
+Test Loss: 11.6957
+Protein-wise Spearman: Mean = 0.2413, Std = 0.4039, Median = 0.2720
+Cell-wise Spearman: Mean = 0.2450, Std = 0.2047, Median = 0.2222
+Number of cells with low variation: 0
+Epoch 10: Learning rate reduced.
+Epoch 10: EB evidence = 0.9269
+Epoch 11/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 11/100: 100%|██████████| 1/1 [00:00<00:00,  3.84it/s]                                                           Epoch [11/100] Total Loss: 7.6953 | mRNA Recon: 1.0351 | Protein Recon: 0.2994 | Alignment: 0.4051 | Protein Pred: 0.2594 | mRNA Pred: 1.0370
+Test Loss: 11.6740
+Protein-wise Spearman: Mean = 0.2317, Std = 0.4100, Median = 0.2537
+Cell-wise Spearman: Mean = 0.2458, Std = 0.2040, Median = 0.2206
+Number of cells with low variation: 0
+Epoch 11: EB evidence = 0.8903
+Epoch 12/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 12/100: 100%|██████████| 1/1 [00:00<00:00,  3.09it/s]                                                           Epoch [12/100] Total Loss: 7.6309 | mRNA Recon: 1.0297 | Protein Recon: 0.2910 | Alignment: 0.3935 | Protein Pred: 0.2556 | mRNA Pred: 1.0310
+Test Loss: 11.6737
+Protein-wise Spearman: Mean = 0.2246, Std = 0.4152, Median = 0.2125
+Cell-wise Spearman: Mean = 0.2498, Std = 0.2014, Median = 0.2226
+Number of cells with low variation: 0
+Epoch 12: EB evidence = 0.3767
+Epoch 13/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 13/100: 100%|██████████| 1/1 [00:00<00:00,  4.12it/s]                                                           Epoch [13/100] Total Loss: 7.5807 | mRNA Recon: 1.0270 | Protein Recon: 0.2822 | Alignment: 0.3811 | Protein Pred: 0.2515 | mRNA Pred: 1.0280
+Test Loss: 11.6876
+Protein-wise Spearman: Mean = 0.2193, Std = 0.4164, Median = 0.2022
+Cell-wise Spearman: Mean = 0.2574, Std = 0.1972, Median = 0.2319
+Number of cells with low variation: 0
+Epoch 13: EB evidence = 0.9044
+Epoch 14/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 14/100: 100%|██████████| 1/1 [00:00<00:00,  4.50it/s]                                                           Epoch [14/100] Total Loss: 7.5436 | mRNA Recon: 1.0259 | Protein Recon: 0.2746 | Alignment: 0.3693 | Protein Pred: 0.2477 | mRNA Pred: 1.0268
+Test Loss: 11.7073
+Protein-wise Spearman: Mean = 0.2165, Std = 0.4170, Median = 0.2079
+Cell-wise Spearman: Mean = 0.2640, Std = 0.1896, Median = 0.2411
+Number of cells with low variation: 0
+Epoch 14: EB evidence = 0.9060
+Epoch 15/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 15/100: 100%|██████████| 1/1 [00:00<00:00,  4.34it/s]                                                           Epoch [15/100] Total Loss: 7.5113 | mRNA Recon: 1.0253 | Protein Recon: 0.2678 | Alignment: 0.3594 | Protein Pred: 0.2438 | mRNA Pred: 1.0264
+Test Loss: 11.7057
+Protein-wise Spearman: Mean = 0.2123, Std = 0.4193, Median = 0.2114
+Cell-wise Spearman: Mean = 0.2669, Std = 0.1904, Median = 0.2500
+Number of cells with low variation: 0
+Epoch 15: EB evidence = 1.0714
+Epoch 16/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 16/100: 100%|██████████| 1/1 [00:00<00:00,  4.44it/s]                                                           Epoch [16/100] Total Loss: 7.4788 | mRNA Recon: 1.0242 | Protein Recon: 0.2635 | Alignment: 0.3500 | Protein Pred: 0.2397 | mRNA Pred: 1.0254
+Test Loss: 11.7011
+Protein-wise Spearman: Mean = 0.2117, Std = 0.4177, Median = 0.2131
+Cell-wise Spearman: Mean = 0.2677, Std = 0.1859, Median = 0.2524
+Number of cells with low variation: 0
+Epoch 16: EB evidence = 0.8217
+Epoch 17/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 17/100: 100%|██████████| 1/1 [00:00<00:00,  4.87it/s]                                                           Epoch [17/100] Total Loss: 7.4419 | mRNA Recon: 1.0222 | Protein Recon: 0.2597 | Alignment: 0.3412 | Protein Pred: 0.2355 | mRNA Pred: 1.0237
+Test Loss: 11.6746
+Protein-wise Spearman: Mean = 0.2093, Std = 0.4146, Median = 0.2462
+Cell-wise Spearman: Mean = 0.2660, Std = 0.1883, Median = 0.2508
+Number of cells with low variation: 0
+Epoch 17: EB evidence = 0.8295
+Epoch 18/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 18/100: 100%|██████████| 1/1 [00:00<00:00,  4.87it/s]                                                           Epoch [18/100] Total Loss: 7.3975 | mRNA Recon: 1.0196 | Protein Recon: 0.2545 | Alignment: 0.3323 | Protein Pred: 0.2305 | mRNA Pred: 1.0213
+Test Loss: 11.6493
+Protein-wise Spearman: Mean = 0.2071, Std = 0.4085, Median = 0.2598
+Cell-wise Spearman: Mean = 0.2593, Std = 0.1905, Median = 0.2419
+Number of cells with low variation: 0
+Epoch 18: EB evidence = 0.8654
+Epoch 19/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 19/100: 100%|██████████| 1/1 [00:00<00:00,  4.86it/s]                                                           Epoch [19/100] Total Loss: 7.3518 | mRNA Recon: 1.0168 | Protein Recon: 0.2490 | Alignment: 0.3242 | Protein Pred: 0.2254 | mRNA Pred: 1.0185
+Test Loss: 11.6344
+Protein-wise Spearman: Mean = 0.2034, Std = 0.4015, Median = 0.2571
+Cell-wise Spearman: Mean = 0.2522, Std = 0.1930, Median = 0.2359
+Number of cells with low variation: 0
+Epoch 19: EB evidence = 0.8739
+Epoch 20/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 20/100: 100%|██████████| 1/1 [00:00<00:00,  4.88it/s]                                                           Epoch [20/100] Total Loss: 7.3058 | mRNA Recon: 1.0141 | Protein Recon: 0.2423 | Alignment: 0.3166 | Protein Pred: 0.2202 | mRNA Pred: 1.0160
+Test Loss: 11.6209
+Protein-wise Spearman: Mean = 0.1963, Std = 0.3951, Median = 0.2580
+Cell-wise Spearman: Mean = 0.2427, Std = 0.1963, Median = 0.2252
+Number of cells with low variation: 0
+Epoch 20: Learning rate reduced.
+Epoch 20: EB evidence = 1.3347
+Epoch 21/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 21/100: 100%|██████████| 1/1 [00:00<00:00,  4.91it/s]                                                           Epoch [21/100] Total Loss: 7.2661 | mRNA Recon: 1.0119 | Protein Recon: 0.2357 | Alignment: 0.3096 | Protein Pred: 0.2159 | mRNA Pred: 1.0137
+Test Loss: 11.6194
+Protein-wise Spearman: Mean = 0.1894, Std = 0.3921, Median = 0.2196
+Cell-wise Spearman: Mean = 0.2324, Std = 0.1998, Median = 0.2133
+Number of cells with low variation: 0
+Epoch 21: EB evidence = 0.8162
+Epoch 22/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 22/100: 100%|██████████| 1/1 [00:00<00:00,  4.85it/s]                                                           Epoch [22/100] Total Loss: 7.2349 | mRNA Recon: 1.0104 | Protein Recon: 0.2308 | Alignment: 0.3041 | Protein Pred: 0.2119 | mRNA Pred: 1.0122
+Test Loss: 11.6244
+Protein-wise Spearman: Mean = 0.1832, Std = 0.3917, Median = 0.2221
+Cell-wise Spearman: Mean = 0.2224, Std = 0.2020, Median = 0.2018
+Number of cells with low variation: 0
+Epoch 22: EB evidence = 0.9021
+Epoch 23/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 23/100: 100%|██████████| 1/1 [00:00<00:00,  4.85it/s]                                                           Epoch [23/100] Total Loss: 7.2087 | mRNA Recon: 1.0092 | Protein Recon: 0.2255 | Alignment: 0.2991 | Protein Pred: 0.2090 | mRNA Pred: 1.0111
+Test Loss: 11.6290
+Protein-wise Spearman: Mean = 0.1773, Std = 0.3926, Median = 0.2339
+Cell-wise Spearman: Mean = 0.2125, Std = 0.2028, Median = 0.1915
+Number of cells with low variation: 0
+Epoch 23: EB evidence = 0.8955
+Epoch 24/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 24/100: 100%|██████████| 1/1 [00:00<00:00,  4.74it/s]                                                           Epoch [24/100] Total Loss: 7.1830 | mRNA Recon: 1.0082 | Protein Recon: 0.2208 | Alignment: 0.2938 | Protein Pred: 0.2057 | mRNA Pred: 1.0101
+Test Loss: 11.6319
+Protein-wise Spearman: Mean = 0.1696, Std = 0.3932, Median = 0.2300
+Cell-wise Spearman: Mean = 0.2003, Std = 0.2014, Median = 0.1815
+Number of cells with low variation: 0
+Epoch 24: EB evidence = 1.1694
+Epoch 25/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 25/100: 100%|██████████| 1/1 [00:00<00:00,  4.17it/s]                                                           Epoch [25/100] Total Loss: 7.1600 | mRNA Recon: 1.0075 | Protein Recon: 0.2161 | Alignment: 0.2893 | Protein Pred: 0.2027 | mRNA Pred: 1.0092
+Test Loss: 11.6353
+Protein-wise Spearman: Mean = 0.1616, Std = 0.3927, Median = 0.2200
+Cell-wise Spearman: Mean = 0.1899, Std = 0.2007, Median = 0.1673
+Number of cells with low variation: 0
+Epoch 25: EB evidence = 0.9607
+Epoch 26/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 26/100: 100%|██████████| 1/1 [00:00<00:00,  4.92it/s]                                                           Epoch [26/100] Total Loss: 7.1372 | mRNA Recon: 1.0066 | Protein Recon: 0.2112 | Alignment: 0.2845 | Protein Pred: 0.1999 | mRNA Pred: 1.0086
+Test Loss: 11.6404
+Protein-wise Spearman: Mean = 0.1533, Std = 0.3907, Median = 0.2011
+Cell-wise Spearman: Mean = 0.1811, Std = 0.2018, Median = 0.1558
+Number of cells with low variation: 0
+Epoch 26: EB evidence = 0.9829
+Epoch 27/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 27/100: 100%|██████████| 1/1 [00:00<00:00,  4.89it/s]                                                           Epoch [27/100] Total Loss: 7.1148 | mRNA Recon: 1.0059 | Protein Recon: 0.2060 | Alignment: 0.2803 | Protein Pred: 0.1970 | mRNA Pred: 1.0079
+Test Loss: 11.6407
+Protein-wise Spearman: Mean = 0.1445, Std = 0.3877, Median = 0.1886
+Cell-wise Spearman: Mean = 0.1754, Std = 0.2021, Median = 0.1498
+Number of cells with low variation: 0
+Epoch 27: EB evidence = 0.9799
+Epoch 28/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 28/100: 100%|██████████| 1/1 [00:00<00:00,  4.37it/s]                                                           Epoch [28/100] Total Loss: 7.0961 | mRNA Recon: 1.0051 | Protein Recon: 0.2011 | Alignment: 0.2771 | Protein Pred: 0.1950 | mRNA Pred: 1.0073
+Test Loss: 11.6335
+Protein-wise Spearman: Mean = 0.1321, Std = 0.3818, Median = 0.1852
+Cell-wise Spearman: Mean = 0.1730, Std = 0.2012, Median = 0.1472
+Number of cells with low variation: 0
+Epoch 28: EB evidence = -inf
+Epoch 29/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 29/100: 100%|██████████| 1/1 [00:00<00:00,  4.30it/s]                                                           Epoch [29/100] Total Loss: 7.0736 | mRNA Recon: 1.0042 | Protein Recon: 0.1966 | Alignment: 0.2730 | Protein Pred: 0.1922 | mRNA Pred: 1.0066
+Test Loss: 11.6242
+Protein-wise Spearman: Mean = 0.1197, Std = 0.3754, Median = 0.1865
+Cell-wise Spearman: Mean = 0.1727, Std = 0.2008, Median = 0.1460
+Number of cells with low variation: 0
+Epoch 29: EB evidence = 0.9685
+Epoch 30/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 30/100: 100%|██████████| 1/1 [00:00<00:00,  4.72it/s]                                                           Epoch [30/100] Total Loss: 7.0565 | mRNA Recon: 1.0033 | Protein Recon: 0.1926 | Alignment: 0.2699 | Protein Pred: 0.1906 | mRNA Pred: 1.0057
+Test Loss: 11.6176
+Protein-wise Spearman: Mean = 0.1112, Std = 0.3752, Median = 0.0712
+Cell-wise Spearman: Mean = 0.1744, Std = 0.2018, Median = 0.1448
+Number of cells with low variation: 0
+Epoch 30: Learning rate reduced.
+Epoch 30: EB evidence = 0.9401
+Epoch 31/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 31/100: 100%|██████████| 1/1 [00:00<00:00,  4.06it/s]                                                           Epoch [31/100] Total Loss: 7.0353 | mRNA Recon: 1.0023 | Protein Recon: 0.1878 | Alignment: 0.2665 | Protein Pred: 0.1882 | mRNA Pred: 1.0049
+Test Loss: 11.6106
+Protein-wise Spearman: Mean = 0.1085, Std = 0.3774, Median = 0.0689
+Cell-wise Spearman: Mean = 0.1749, Std = 0.2007, Median = 0.1484
+Number of cells with low variation: 0
+Epoch 31: EB evidence = 0.9587
+Epoch 32/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 32/100: 100%|██████████| 1/1 [00:00<00:00,  4.83it/s]                                                           Epoch [32/100] Total Loss: 7.0216 | mRNA Recon: 1.0014 | Protein Recon: 0.1853 | Alignment: 0.2646 | Protein Pred: 0.1868 | mRNA Pred: 1.0043
+Test Loss: 11.5995
+Protein-wise Spearman: Mean = 0.1096, Std = 0.3786, Median = 0.0761
+Cell-wise Spearman: Mean = 0.1794, Std = 0.1999, Median = 0.1528
+Number of cells with low variation: 0
+Epoch 32: EB evidence = 0.9475
+Epoch 33/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 33/100: 100%|██████████| 1/1 [00:00<00:00,  4.86it/s]                                                           Epoch [33/100] Total Loss: 7.0063 | mRNA Recon: 1.0006 | Protein Recon: 0.1831 | Alignment: 0.2615 | Protein Pred: 0.1852 | mRNA Pred: 1.0035
+Test Loss: 11.5878
+Protein-wise Spearman: Mean = 0.1125, Std = 0.3781, Median = 0.0938
+Cell-wise Spearman: Mean = 0.1872, Std = 0.1998, Median = 0.1623
+Number of cells with low variation: 0
+Epoch 33: EB evidence = 1.1526
+Epoch 34/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 34/100: 100%|██████████| 1/1 [00:00<00:00,  4.54it/s]                                                           Epoch [34/100] Total Loss: 6.9928 | mRNA Recon: 0.9997 | Protein Recon: 0.1820 | Alignment: 0.2584 | Protein Pred: 0.1838 | mRNA Pred: 1.0026
+Test Loss: 11.5793
+Protein-wise Spearman: Mean = 0.1162, Std = 0.3764, Median = 0.1046
+Cell-wise Spearman: Mean = 0.1945, Std = 0.2001, Median = 0.1694
+Number of cells with low variation: 0
+Epoch 34: EB evidence = 1.0076
+Epoch 35/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 35/100: 100%|██████████| 1/1 [00:00<00:00,  4.84it/s]                                                           Epoch [35/100] Total Loss: 6.9781 | mRNA Recon: 0.9988 | Protein Recon: 0.1803 | Alignment: 0.2560 | Protein Pred: 0.1820 | mRNA Pred: 1.0018
+Test Loss: 11.5723
+Protein-wise Spearman: Mean = 0.1198, Std = 0.3736, Median = 0.1012
+Cell-wise Spearman: Mean = 0.1987, Std = 0.1997, Median = 0.1758
+Number of cells with low variation: 0
+Epoch 35: EB evidence = 0.9829
+Epoch 36/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 36/100: 100%|██████████| 1/1 [00:00<00:00,  4.87it/s]                                                           Epoch [36/100] Total Loss: 6.9657 | mRNA Recon: 0.9979 | Protein Recon: 0.1795 | Alignment: 0.2531 | Protein Pred: 0.1809 | mRNA Pred: 1.0010
+Test Loss: 11.5645
+Protein-wise Spearman: Mean = 0.1235, Std = 0.3693, Median = 0.0889
+Cell-wise Spearman: Mean = 0.2002, Std = 0.1991, Median = 0.1794
+Number of cells with low variation: 0
+Epoch 36: EB evidence = 0.8485
+Epoch 37/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 37/100: 100%|██████████| 1/1 [00:00<00:00,  4.88it/s]                                                           Epoch [37/100] Total Loss: 6.9517 | mRNA Recon: 0.9971 | Protein Recon: 0.1776 | Alignment: 0.2500 | Protein Pred: 0.1794 | mRNA Pred: 1.0003
+Test Loss: 11.5583
+Protein-wise Spearman: Mean = 0.1283, Std = 0.3653, Median = 0.0983
+Cell-wise Spearman: Mean = 0.2024, Std = 0.1991, Median = 0.1827
+Number of cells with low variation: 0
+Epoch 37: EB evidence = 0.9464
+Epoch 38/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 38/100: 100%|██████████| 1/1 [00:00<00:00,  4.37it/s]                                                           Epoch [38/100] Total Loss: 6.9386 | mRNA Recon: 0.9963 | Protein Recon: 0.1768 | Alignment: 0.2470 | Protein Pred: 0.1780 | mRNA Pred: 0.9995
+Test Loss: 11.5546
+Protein-wise Spearman: Mean = 0.1337, Std = 0.3628, Median = 0.1241
+Cell-wise Spearman: Mean = 0.2047, Std = 0.2003, Median = 0.1847
+Number of cells with low variation: 0
+Epoch 38: EB evidence = 1.0019
+Epoch 39/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 39/100: 100%|██████████| 1/1 [00:00<00:00,  4.89it/s]                                                           Epoch [39/100] Total Loss: 6.9252 | mRNA Recon: 0.9955 | Protein Recon: 0.1754 | Alignment: 0.2448 | Protein Pred: 0.1763 | mRNA Pred: 0.9988
+Test Loss: 11.5522
+Protein-wise Spearman: Mean = 0.1391, Std = 0.3626, Median = 0.1188
+Cell-wise Spearman: Mean = 0.2069, Std = 0.2022, Median = 0.1865
+Number of cells with low variation: 0
+Epoch 39: EB evidence = 0.9850
+Epoch 40/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 40/100: 100%|██████████| 1/1 [00:00<00:00,  4.84it/s]                                                           Epoch [40/100] Total Loss: 6.9131 | mRNA Recon: 0.9947 | Protein Recon: 0.1744 | Alignment: 0.2424 | Protein Pred: 0.1750 | mRNA Pred: 0.9980
+Test Loss: 11.5495
+Protein-wise Spearman: Mean = 0.1428, Std = 0.3651, Median = 0.1210
+Cell-wise Spearman: Mean = 0.2057, Std = 0.2033, Median = 0.1855
+Number of cells with low variation: 0
+Epoch 40: Learning rate reduced.
+Epoch 40: EB evidence = 0.9864
+Epoch 41/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 41/100: 100%|██████████| 1/1 [00:00<00:00,  4.81it/s]                                                           Epoch [41/100] Total Loss: 6.9004 | mRNA Recon: 0.9939 | Protein Recon: 0.1730 | Alignment: 0.2396 | Protein Pred: 0.1737 | mRNA Pred: 0.9972
+Test Loss: 11.5475
+Protein-wise Spearman: Mean = 0.1446, Std = 0.3676, Median = 0.1204
+Cell-wise Spearman: Mean = 0.2043, Std = 0.2036, Median = 0.1859
+Number of cells with low variation: 0
+Epoch 41: EB evidence = 0.9698
+Epoch 42/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 42/100: 100%|██████████| 1/1 [00:00<00:00,  4.86it/s]                                                           Epoch [42/100] Total Loss: 6.8903 | mRNA Recon: 0.9932 | Protein Recon: 0.1722 | Alignment: 0.2379 | Protein Pred: 0.1726 | mRNA Pred: 0.9966
+Test Loss: 11.5449
+Protein-wise Spearman: Mean = 0.1464, Std = 0.3689, Median = 0.1184
+Cell-wise Spearman: Mean = 0.2046, Std = 0.2039, Median = 0.1859
+Number of cells with low variation: 0
+Epoch 42: EB evidence = 0.8674
+Epoch 43/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 43/100: 100%|██████████| 1/1 [00:00<00:00,  4.33it/s]                                                           Epoch [43/100] Total Loss: 6.8804 | mRNA Recon: 0.9924 | Protein Recon: 0.1712 | Alignment: 0.2363 | Protein Pred: 0.1716 | mRNA Pred: 0.9958
+Test Loss: 11.5412
+Protein-wise Spearman: Mean = 0.1483, Std = 0.3692, Median = 0.1149
+Cell-wise Spearman: Mean = 0.2069, Std = 0.2043, Median = 0.1881
+Number of cells with low variation: 0
+Epoch 43: EB evidence = 0.9921
+Epoch 44/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 44/100: 100%|██████████| 1/1 [00:00<00:00,  4.88it/s]                                                           Epoch [44/100] Total Loss: 6.8697 | mRNA Recon: 0.9916 | Protein Recon: 0.1707 | Alignment: 0.2346 | Protein Pred: 0.1704 | mRNA Pred: 0.9951
+Test Loss: 11.5354
+Protein-wise Spearman: Mean = 0.1510, Std = 0.3690, Median = 0.1147
+Cell-wise Spearman: Mean = 0.2107, Std = 0.2051, Median = 0.1946
+Number of cells with low variation: 0
+Epoch 44: EB evidence = 0.9848
+Epoch 45/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 45/100: 100%|██████████| 1/1 [00:00<00:00,  4.69it/s]                                                           Epoch [45/100] Total Loss: 6.8598 | mRNA Recon: 0.9909 | Protein Recon: 0.1694 | Alignment: 0.2330 | Protein Pred: 0.1695 | mRNA Pred: 0.9943
+Test Loss: 11.5296
+Protein-wise Spearman: Mean = 0.1551, Std = 0.3678, Median = 0.1189
+Cell-wise Spearman: Mean = 0.2137, Std = 0.2053, Median = 0.1968
+Number of cells with low variation: 0
+Epoch 45: EB evidence = 0.9907
+Epoch 46/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 46/100: 100%|██████████| 1/1 [00:00<00:00,  4.84it/s]                                                           Epoch [46/100] Total Loss: 6.8490 | mRNA Recon: 0.9901 | Protein Recon: 0.1685 | Alignment: 0.2306 | Protein Pred: 0.1687 | mRNA Pred: 0.9935
+Test Loss: 11.5252
+Protein-wise Spearman: Mean = 0.1596, Std = 0.3664, Median = 0.1218
+Cell-wise Spearman: Mean = 0.2168, Std = 0.2056, Median = 0.2028
+Number of cells with low variation: 0
+Epoch 46: EB evidence = 0.9850
+Epoch 47/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 47/100: 100%|██████████| 1/1 [00:00<00:00,  4.88it/s]                                                           Epoch [47/100] Total Loss: 6.8399 | mRNA Recon: 0.9894 | Protein Recon: 0.1680 | Alignment: 0.2287 | Protein Pred: 0.1679 | mRNA Pred: 0.9928
+Test Loss: 11.5214
+Protein-wise Spearman: Mean = 0.1633, Std = 0.3658, Median = 0.1236
+Cell-wise Spearman: Mean = 0.2201, Std = 0.2062, Median = 0.2050
+Number of cells with low variation: 0
+Epoch 47: EB evidence = 0.9815
+Epoch 48/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 48/100: 100%|██████████| 1/1 [00:00<00:00,  3.82it/s]                                                           Epoch [48/100] Total Loss: 6.8273 | mRNA Recon: 0.9885 | Protein Recon: 0.1672 | Alignment: 0.2270 | Protein Pred: 0.1663 | mRNA Pred: 0.9919
+Test Loss: 11.5180
+Protein-wise Spearman: Mean = 0.1660, Std = 0.3663, Median = 0.1262
+Cell-wise Spearman: Mean = 0.2224, Std = 0.2058, Median = 0.2065
+Number of cells with low variation: 0
+Epoch 48: EB evidence = 0.9870
+Epoch 49/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 49/100: 100%|██████████| 1/1 [00:00<00:00,  4.87it/s]                                                           Epoch [49/100] Total Loss: 6.8162 | mRNA Recon: 0.9877 | Protein Recon: 0.1660 | Alignment: 0.2253 | Protein Pred: 0.1651 | mRNA Pred: 0.9911
+Test Loss: 11.5136
+Protein-wise Spearman: Mean = 0.1686, Std = 0.3672, Median = 0.1305
+Cell-wise Spearman: Mean = 0.2247, Std = 0.2048, Median = 0.2095
+Number of cells with low variation: 0
+Epoch 49: EB evidence = 0.9851
+Epoch 50/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 50/100: 100%|██████████| 1/1 [00:00<00:00,  4.88it/s]                                                           Epoch [50/100] Total Loss: 6.8067 | mRNA Recon: 0.9868 | Protein Recon: 0.1656 | Alignment: 0.2236 | Protein Pred: 0.1643 | mRNA Pred: 0.9903
+Test Loss: 11.5105
+Protein-wise Spearman: Mean = 0.1713, Std = 0.3673, Median = 0.1335
+Cell-wise Spearman: Mean = 0.2272, Std = 0.2039, Median = 0.2119
+Number of cells with low variation: 0
+Epoch 50: Learning rate reduced.
+Epoch 50: EB evidence = 1.0004
+Epoch 51/100:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 51/100: 100%|██████████| 1/1 [00:00<00:00,  3.85it/s]                                                           Epoch [51/100] Total Loss: 6.7963 | mRNA Recon: 0.9861 | Protein Recon: 0.1642 | Alignment: 0.2218 | Protein Pred: 0.1635 | mRNA Pred: 0.9895
+Test Loss: 11.5103
+Protein-wise Spearman: Mean = 0.1729, Std = 0.3677, Median = 0.1327
+Cell-wise Spearman: Mean = 0.2296, Std = 0.2035, Median = 0.2145
+Number of cells with low variation: 0
+Epoch 51: EB evidence = 0.9633
+--> EB early stopping at epoch 51 (mean_evidence=0.9737, threshold=0.96)
+Test Loss: 11.5103
+Protein-wise Spearman: Mean = 0.1729, Std = 0.3677, Median = 0.1327
+Cell-wise Spearman: Mean = 0.2296, Std = 0.2035, Median = 0.2145
+Number of cells with low variation: 0
+Average Cell Pearson Cor in test data:  0.30914266849722494
+Average Cell Spearman Cor in test data:  0.22963803444599004
+Average Protein Cor in test data: 0.1903
+
+Average RMSE in test data: 0.3972
+
+saved model: /root/pe-virtual-protein/dgat_work_uniformqc/DGAT_models/12893_gene_31_protein__holdout_breast_cancer (genes=12893, proteins=31)
+
+[uqc] TRAINING DONE — running prediction (v5 body, redirected outputs)
+device: cuda
+restored holdout_tonsil: genes=12893 proteins=31 from /root/pe-virtual-protein/dgat_work_uniformqc/DGAT_models/12893_gene_31_protein__holdout_tonsil
+restored holdout_breast_cancer: genes=12893 proteins=31 from /root/pe-virtual-protein/dgat_work_uniformqc/DGAT_models/12893_gene_31_protein__holdout_breast_cancer
+
+########## PREDICT fold=holdout_tonsil ##########
+Traceback (most recent call last):
+  File "/root/pe-virtual-protein/dgat_uniform_qc_run.py", line 103, in <module>
+    exec(compile(_body, "dgat_run_uniformqc_body.py", "exec"))
+  File "dgat_run_uniformqc_body.py", line 109, in <module>
+  File "dgat_run_uniformqc_body.py", line 40, in _torch_load
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/serialization.py", line 1484, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/serialization.py", line 759, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/serialization.py", line 740, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/root/pe-virtual-protein/dgat_work_uniformqc/DGAT_models/12893_gene_31_protein/encoder_mRNA.pth'

@@ -22,11 +22,15 @@ give 0.274 ± 0.029, with the external isotype floor at 0.103 ± 0.004.
 A shallow non-linear MLP baseline (0.346 ± 0.015 across three seeds)
 sits between the graph models and ridge, ruling out linearity of the
 competitors as an explanation.
+A matched-spot DGAT re-run (uniform spot sets, no panel-internal
+filtering) collapses DGAT to 0.240 -- on par with DPAS-Graph itself --
+showing the reference-pipeline gap (0.341) was a spot-set artefact.
+See results_server_final/dgat_uniformqc/.
 
 You can verify the manuscript numbers directly:
 
 ```bash
-python scripts/paper_number_audit.py        # 145 automated checks, 0 expected failures
+python scripts/paper_number_audit.py        # 150 automated checks, 0 expected failures
 python scripts/independent_recheck_v2.py    # independent end-to-end recheck
 ```
 

@@ -338,6 +338,22 @@ _p2 = float(_wil[(_wil.scope == "pooled") & (_wil.variable == "mean_expr")].p.il
 chk("RNA覆盖 检出率 Wilcoxon p (pooled)", _p1, 0.66, tol=0.005)
 chk("RNA覆盖 表达量 Wilcoxon p (pooled)", _p2, 0.51, tol=0.005)
 
+# ---- 16. DGAT 统一 spot 集（2026-09-14 GPU 重跑）----
+_nf = pd.read_csv("results_server_final/dgat_uniformqc/dgat_nofilter_gse_per_protein.csv")
+_nf_m = _nf[~_nf.protein.str.startswith(("mouse_", "rat_"))]
+chk("DGAT 统一 spot 集 31-marker 总均值", float(_nf_m.spearman.mean()), 0.240, tol=0.002)
+for _fd, _w in [("holdout_tonsil", 0.227), ("holdout_breast_cancer", 0.253)]:
+    chk(f"DGAT 统一 spot 集 {_fd} 折均值", float(_nf_m[_nf_m.fold == _fd].spearman.mean()), _w, tol=0.002)
+_p5 = pd.read_csv("results_server_final/dgat_uniformqc/dgat_panel500_gse_per_protein.csv")
+chk("DGAT panel内500 中间变体总均值", float(_p5[~_p5.protein.str.startswith(("mouse_", "rat_"))].spearman.mean()), 0.306, tol=0.002)
+_ridge = pd.read_csv("results/competitor_benchmark_per_protein.csv")
+_rp = _ridge[_ridge.model == "ridge_pc"].groupby("protein").spearman.mean()
+_dg = _nf_m.groupby("protein").spearman.mean()
+_j = pd.concat([_rp.rename("ridge"), _dg.rename("dgat")], axis=1).dropna()
+_n_win = int((_j.dgat > _j.ridge).sum())
+L.append(("DGAT 统一 spot 集 胜 ridge 标志物数", "4/31", f"{_n_win}/31",
+          "PASS" if _n_win == 4 else "**FAIL**"))
+
 # ---- 输出 ----
 out = ["# 论文数字一致性审计（自动）", "",
        "| 数字 | 草稿引用值 | 实测值 | 判定 |", "|---|---|---|---|"]
