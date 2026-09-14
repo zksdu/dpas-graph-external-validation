@@ -10,10 +10,10 @@ import matplotlib.image as mpimg
 os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 fig = plt.figure(figsize=(7.4, 9.6))
-gs = fig.add_gridspec(3, 1, height_ratios=[2.9, 2.7, 3.9], hspace=0.07)
+gs = fig.add_gridspec(3, 1, height_ratios=[2.9, 3.9, 2.7], hspace=0.07)
 for i, f in enumerate(["results/fig1_benchmark_external.png",
-                       "results/fig1c_panel_reduction.png",
-                       "results/fig1d_budget_vs_baselines.png"]):
+                       "results/fig1d_budget_vs_baselines.png",
+                       "results/fig1c_panel_reduction.png"]):
     ax = fig.add_subplot(gs[i])
     ax.imshow(mpimg.imread(f))
     ax.axis("off")

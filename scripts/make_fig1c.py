@@ -97,7 +97,7 @@ for ax, (title, fold) in zip(axes, FOLDS):
 
 axes[0].set_ylabel("Group-mean per-protein Spearman\n(seed mean ± SD)")
 axes[0].legend(loc="upper left", fontsize=6.5, frameon=False)
-fig.suptitle("C  Panel-reduction sensitivity (design B2, corrected pipeline): compartment vs lymphocyte-subtype markers",
+fig.suptitle("D  Panel-reduction sensitivity (design B2, corrected pipeline): compartment vs lymphocyte-subtype markers",
              fontsize=8.5, y=1.02)
 fig.tight_layout()
 fig.savefig("results/fig1c_panel_reduction.png", dpi=600, bbox_inches="tight")
