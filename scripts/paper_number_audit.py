@@ -324,6 +324,20 @@ for _sec, _wi, _wr in [("A", 0.431, 0.395), ("B", 0.524, 0.588)]:
     chk(f"niche eta2 中位数 对照 {_sec}", float(_neg.eta2.median()), _wi)
     chk(f"niche eta2 中位数 真实 {_sec}", float(_real.eta2.median()), _wr)
 
+# ---- 15. MLP 基线与 RNA 覆盖 Wilcoxon（2026-09-14 扩项）----
+_mlp = pd.read_csv("results/mlp_baseline_summary.csv")
+_m1 = _mlp[_mlp.model == "mlp_64"].iloc[0]
+_m2_ = _mlp[_mlp.model == "mlp_64_32"].iloc[0]
+chk("MLP(64) 三 seed 均值", float(_m1.sp_mean), 0.346, tol=0.002)
+chk("MLP(64) 三 seed SD", float(_m1.sp_sd), 0.015, tol=0.002)
+chk("MLP(64,32) 三 seed 均值", float(_m2_.sp_mean), 0.335, tol=0.002)
+chk("MLP(64,32) 三 seed SD", float(_m2_.sp_sd), 0.016, tol=0.002)
+_wil = pd.read_csv("results/rna_coverage_wilcoxon.csv")
+_p1 = float(_wil[(_wil.scope == "pooled") & (_wil.variable == "detect_rate")].p.iloc[0])
+_p2 = float(_wil[(_wil.scope == "pooled") & (_wil.variable == "mean_expr")].p.iloc[0])
+chk("RNA覆盖 检出率 Wilcoxon p (pooled)", _p1, 0.66, tol=0.005)
+chk("RNA覆盖 表达量 Wilcoxon p (pooled)", _p2, 0.51, tol=0.005)
+
 # ---- 输出 ----
 out = ["# 论文数字一致性审计（自动）", "",
        "| 数字 | 草稿引用值 | 实测值 | 判定 |", "|---|---|---|---|"]
