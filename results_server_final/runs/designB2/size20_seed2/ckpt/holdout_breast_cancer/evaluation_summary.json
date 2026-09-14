@@ -1,0 +1,21 @@
+{
+  "test_name": "breast_cancer",
+  "rmse_global": 0.8457347201269245,
+  "mae_global": 0.5912802731196234,
+  "rmse_pro_mean": 0.723453038404317,
+  "rmse_pro_median": 0.5650906338115103,
+  "mae_pro_mean": 0.5912802731196234,
+  "mae_pro_median": 0.4832578443508512,
+  "pcc_pro_mean": -0.010153873259341428,
+  "pcc_pro_median": -0.11459423533082455,
+  "pcc_pro_std": 0.38781899438206396,
+  "pcc_spot_mean": 0.8032966407586812,
+  "pcc_spot_median": 0.8202363622722846,
+  "pcc_spot_std": 0.12001552104710148,
+  "sp_pro_mean": -0.054933602664797174,
+  "sp_pro_median": -0.11579336453189734,
+  "sp_pro_std": 0.439252075041459,
+  "n_spots": 4164,
+  "n_proteins": 20,
+  "test_loss": 3.2832560539245605
+}

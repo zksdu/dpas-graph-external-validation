@@ -1,0 +1,21 @@
+{
+  "test_name": "tonsil",
+  "rmse_global": 0.6283929809695772,
+  "mae_global": 0.45890852748006367,
+  "rmse_pro_mean": 0.57035389055465,
+  "rmse_pro_median": 0.49186073207937714,
+  "mae_pro_mean": 0.4589085274800636,
+  "mae_pro_median": 0.38848307462992687,
+  "pcc_pro_mean": 0.052385844525152436,
+  "pcc_pro_median": 0.06258072058556409,
+  "pcc_pro_std": 0.2758301655610491,
+  "pcc_spot_mean": 0.8758735572178492,
+  "pcc_spot_median": 0.8937479175523917,
+  "pcc_spot_std": 0.0818879082196464,
+  "sp_pro_mean": 0.06344616058812434,
+  "sp_pro_median": 0.059774636134964025,
+  "sp_pro_std": 0.3403580346596731,
+  "n_spots": 4191,
+  "n_proteins": 20,
+  "test_loss": 2.425881862640381
+}

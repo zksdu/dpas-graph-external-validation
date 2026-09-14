@@ -1,0 +1,8 @@
+celltype,n_eoPE_donors,n_ctrl_donors,n_cells_eoPE,n_cells_ctrl,n_up,n_dn
+vCTB,5,5,516,806,1,2
+vHBC,6,6,667,1533,0,1
+vMC,4,3,244,230,0,0
+vSTB1,6,6,23604,19491,2,1
+vSTB2,6,6,8459,4701,19,4
+vSTBjuv,3,4,755,485,41,2
+vVEC,4,6,496,734,7,4

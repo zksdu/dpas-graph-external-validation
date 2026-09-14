@@ -1,0 +1,23 @@
+{
+  "sample_name": "RNA_proc",
+  "device": "cpu",
+  "ckpt_dir": "runs/lodo_v3/ckpt/holdout_tonsil",
+  "ckpt_prefix": "best",
+  "n_spots": 1387,
+  "n_genes": 4000,
+  "n_proteins": 35,
+  "graph_build_time_sec": 10.702677099994617,
+  "forward_total_time_sec": 53.37222450002446,
+  "forward_mean_time_sec": 2.668611225001223,
+  "forward_std_time_sec": 0.28766303159639167,
+  "ms_per_spot": 1.9240167447737728,
+  "spots_per_sec": 519.7459963466071,
+  "n_warmup": 3,
+  "n_runs": 20,
+  "encoder_total_params": 68279241,
+  "encoder_trainable_params": 68279241,
+  "decoder_total_params": 542755,
+  "decoder_trainable_params": 542755,
+  "model_total_params": 68821996,
+  "model_trainable_params": 68821996
+}

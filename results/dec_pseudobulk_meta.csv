@@ -1,0 +1,124 @@
+group,n_cells,donor,celltype,condition
+073-d|DSC1,331,073-d,DSC1,Term controls
+073-d|DSC2,74,073-d,DSC2,Term controls
+073-d|dBcell,118,073-d,dBcell,Term controls
+073-d|dDSTB,83,073-d,dDSTB,Term controls
+073-d|dEpC,260,073-d,dEpC,Term controls
+073-d|dFB1,50,073-d,dFB1,Term controls
+073-d|dFB2,51,073-d,dFB2,Term controls
+073-d|dLEC,991,073-d,dLEC,Term controls
+073-d|dLECp,162,073-d,dLECp,Term controls
+073-d|dMAC1,320,073-d,dMAC1,Term controls
+073-d|dMAC2,363,073-d,dMAC2,Term controls
+073-d|dMSC,70,073-d,dMSC,Term controls
+073-d|dMono1,283,073-d,dMono1,Term controls
+073-d|dMono2,669,073-d,dMono2,Term controls
+073-d|dNK1,328,073-d,dNK1,Term controls
+073-d|dNK2,161,073-d,dNK2,Term controls
+073-d|dNKp,71,073-d,dNKp,Term controls
+073-d|dSMC,93,073-d,dSMC,Term controls
+073-d|dTcell,1632,073-d,dTcell,Term controls
+073-d|dVEC,294,073-d,dVEC,Term controls
+100-d|DSC1,373,100-d,DSC1,eoPE
+100-d|DSC2,263,100-d,DSC2,eoPE
+100-d|dBcell,61,100-d,dBcell,eoPE
+100-d|dDSTB,303,100-d,dDSTB,eoPE
+100-d|dEVT,418,100-d,dEVT,eoPE
+100-d|dEpC,179,100-d,dEpC,eoPE
+100-d|dFB1,133,100-d,dFB1,eoPE
+100-d|dFB2,248,100-d,dFB2,eoPE
+100-d|dLEC,223,100-d,dLEC,eoPE
+100-d|dMAC1,1244,100-d,dMAC1,eoPE
+100-d|dMAC2,164,100-d,dMAC2,eoPE
+100-d|dMSC,83,100-d,dMSC,eoPE
+100-d|dMono1,320,100-d,dMono1,eoPE
+100-d|dMono2,886,100-d,dMono2,eoPE
+100-d|dNK1,388,100-d,dNK1,eoPE
+100-d|dNK2,324,100-d,dNK2,eoPE
+100-d|dNKp,86,100-d,dNKp,eoPE
+100-d|dSMC,142,100-d,dSMC,eoPE
+100-d|dTcell,1490,100-d,dTcell,eoPE
+100-d|dVEC,344,100-d,dVEC,eoPE
+102-d|DSC1,248,102-d,DSC1,eoPE
+102-d|DSC2,52,102-d,DSC2,eoPE
+102-d|dBcell,81,102-d,dBcell,eoPE
+102-d|dDSTB,223,102-d,dDSTB,eoPE
+102-d|dEVT,178,102-d,dEVT,eoPE
+102-d|dEpC,173,102-d,dEpC,eoPE
+102-d|dFB1,68,102-d,dFB1,eoPE
+102-d|dFB2,175,102-d,dFB2,eoPE
+102-d|dGranul,57,102-d,dGranul,eoPE
+102-d|dLEC,257,102-d,dLEC,eoPE
+102-d|dMAC1,1182,102-d,dMAC1,eoPE
+102-d|dMAC2,199,102-d,dMAC2,eoPE
+102-d|dMSC,64,102-d,dMSC,eoPE
+102-d|dMono1,420,102-d,dMono1,eoPE
+102-d|dMono2,730,102-d,dMono2,eoPE
+102-d|dNK1,514,102-d,dNK1,eoPE
+102-d|dNK2,474,102-d,dNK2,eoPE
+102-d|dNKp,94,102-d,dNKp,eoPE
+102-d|dSMC,103,102-d,dSMC,eoPE
+102-d|dTcell,1715,102-d,dTcell,eoPE
+102-d|dVEC,277,102-d,dVEC,eoPE
+274-d|dEpC,101,274-d,dEpC,eoPE
+274-d|dMAC1,170,274-d,dMAC1,eoPE
+274-d|dMAC2,1017,274-d,dMAC2,eoPE
+274-d|dSMC,66,274-d,dSMC,eoPE
+274-d|dTcell,357,274-d,dTcell,eoPE
+274-d|dVEC,106,274-d,dVEC,eoPE
+327-d|dEpC,65,327-d,dEpC,Term controls
+327-d|dGranul,59,327-d,dGranul,Term controls
+327-d|dLEC,114,327-d,dLEC,Term controls
+327-d|dMAC1,1321,327-d,dMAC1,Term controls
+327-d|dMAC2,71,327-d,dMAC2,Term controls
+327-d|dMono1,103,327-d,dMono1,Term controls
+327-d|dNK1,507,327-d,dNK1,Term controls
+327-d|dNK2,587,327-d,dNK2,Term controls
+327-d|dPlasmaC,532,327-d,dPlasmaC,Term controls
+327-d|dSMC,104,327-d,dSMC,Term controls
+327-d|dTcell,1399,327-d,dTcell,Term controls
+327-d|dVEC,167,327-d,dVEC,Term controls
+328-d|DSC1,92,328-d,DSC1,Term controls
+328-d|dLEC,713,328-d,dLEC,Term controls
+328-d|dMAC1,242,328-d,dMAC1,Term controls
+328-d|dMAC2,573,328-d,dMAC2,Term controls
+328-d|dMono1,90,328-d,dMono1,Term controls
+328-d|dNK1,346,328-d,dNK1,Term controls
+328-d|dNK2,255,328-d,dNK2,Term controls
+328-d|dSMC,223,328-d,dSMC,Term controls
+328-d|dTcell,619,328-d,dTcell,Term controls
+328-d|dVEC,305,328-d,dVEC,Term controls
+372-d|DSC1,232,372-d,DSC1,Term controls
+372-d|dEpC,83,372-d,dEpC,Term controls
+372-d|dLEC,416,372-d,dLEC,Term controls
+372-d|dMAC1,1702,372-d,dMAC1,Term controls
+372-d|dMAC2,104,372-d,dMAC2,Term controls
+372-d|dMono1,84,372-d,dMono1,Term controls
+372-d|dNK1,911,372-d,dNK1,Term controls
+372-d|dNK2,385,372-d,dNK2,Term controls
+372-d|dSMC,170,372-d,dSMC,Term controls
+372-d|dTcell,890,372-d,dTcell,Term controls
+372-d|dVEC,331,372-d,dVEC,Term controls
+389-d|DSC1,61,389-d,DSC1,eoPE
+389-d|dEpC,216,389-d,dEpC,eoPE
+389-d|dLEC,536,389-d,dLEC,eoPE
+389-d|dMAC1,956,389-d,dMAC1,eoPE
+389-d|dNK1,1640,389-d,dNK1,eoPE
+389-d|dNK2,957,389-d,dNK2,eoPE
+389-d|dSMC,95,389-d,dSMC,eoPE
+389-d|dTcell,750,389-d,dTcell,eoPE
+389-d|dVEC,147,389-d,dVEC,eoPE
+419-d|DSC1,163,419-d,DSC1,eoPE
+419-d|dDSTB,454,419-d,dDSTB,eoPE
+419-d|dEVT,54,419-d,dEVT,eoPE
+419-d|dEpC,113,419-d,dEpC,eoPE
+419-d|dFB2,110,419-d,dFB2,eoPE
+419-d|dLEC,770,419-d,dLEC,eoPE
+419-d|dLECp,157,419-d,dLECp,eoPE
+419-d|dMAC1,1017,419-d,dMAC1,eoPE
+419-d|dMAC2,302,419-d,dMAC2,eoPE
+419-d|dMono1,242,419-d,dMono1,eoPE
+419-d|dNK1,1180,419-d,dNK1,eoPE
+419-d|dNK2,184,419-d,dNK2,eoPE
+419-d|dTcell,1068,419-d,dTcell,eoPE
+419-d|dVEC,277,419-d,dVEC,eoPE

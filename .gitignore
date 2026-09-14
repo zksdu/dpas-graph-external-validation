@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Regenerable outputs
+results/independent_recheck_v2.md
+results/paper_number_audit.md
+
+# Large data (kept out of Git; see README "not in this repository")
+*.npy
+*.h5ad
+*.h5
+*.pth
+*.tar.gz
+data/
+proc/
+runs/**/*.npy
+runs/**/graphs/

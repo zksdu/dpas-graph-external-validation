@@ -1,0 +1,6 @@
+model,sp_mean
+ridge_pc_single_avg,0.3989513117763528
+ridge_pc,0.38763324131188887
+ridge_pc_coord,0.3860877227205572
+knn15,0.3041695979175581
+DPAS-Graph (mean of 2 ckpts),0.1455408113050991

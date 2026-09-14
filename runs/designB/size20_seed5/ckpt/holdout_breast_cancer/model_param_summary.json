@@ -1,0 +1,10 @@
+{
+  "encoder_mRNA_total": 68279241,
+  "encoder_mRNA_trainable": 68279241,
+  "decoder_mRNA_total": 2576800,
+  "decoder_mRNA_trainable": 2576800,
+  "decoder_protein_total": 535060,
+  "decoder_protein_trainable": 535060,
+  "model_total": 71391101,
+  "model_trainable": 71391101
+}

@@ -1,0 +1,17 @@
+{
+  "n_holdouts": 2,
+  "seed": 4,
+  "graph_seed": 4,
+  "mean_best_rmse_global": 0.7843921337847948,
+  "mean_best_mae_global": 0.5725072333821366,
+  "mean_best_pcc_pro_median": 0.14827212932740305,
+  "mean_best_pcc_spot_median": 0.8221782252812211,
+  "mean_final_rmse_global": 0.7843921337847948,
+  "mean_final_mae_global": 0.5725072333821366,
+  "mean_final_pcc_pro_median": 0.14827212932740305,
+  "mean_final_pcc_spot_median": 0.8221782252812211,
+  "median_final_rmse_global": 0.7843921337847948,
+  "median_final_mae_global": 0.5725072333821366,
+  "median_final_pcc_pro_median": 0.14827212932740305,
+  "median_final_pcc_spot_median": 0.8221782252812211
+}

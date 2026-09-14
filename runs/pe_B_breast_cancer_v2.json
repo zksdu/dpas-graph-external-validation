@@ -1,0 +1,23 @@
+{
+  "sample_name": "RNA_proc",
+  "device": "cpu",
+  "ckpt_dir": "runs/lodo_v3/ckpt/holdout_breast_cancer",
+  "ckpt_prefix": "best",
+  "n_spots": 1387,
+  "n_genes": 4000,
+  "n_proteins": 35,
+  "graph_build_time_sec": 10.378527000022586,
+  "forward_total_time_sec": 49.80250220000744,
+  "forward_mean_time_sec": 2.490125110000372,
+  "forward_std_time_sec": 0.049967072107404184,
+  "ms_per_spot": 1.7953317303535485,
+  "spots_per_sec": 557.0001259895704,
+  "n_warmup": 3,
+  "n_runs": 20,
+  "encoder_total_params": 68279241,
+  "encoder_trainable_params": 68279241,
+  "decoder_total_params": 542755,
+  "decoder_trainable_params": 542755,
+  "model_total_params": 68821996,
+  "model_trainable_params": 68821996
+}

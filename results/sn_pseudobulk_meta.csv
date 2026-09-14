@@ -1,0 +1,86 @@
+group,n_cells,donor,celltype,condition
+327-v|vCTB,105,327-v,vCTB,Term controls
+327-v|vHBC,405,327-v,vHBC,Term controls
+327-v|vSTB1,3672,327-v,vSTB1,Term controls
+327-v|vSTB2,1098,327-v,vSTB2,Term controls
+327-v|vTcell,79,327-v,vTcell,Term controls
+327-v|vVEC,50,327-v,vVEC,Term controls
+328-v|vHBC,172,328-v,vHBC,Term controls
+328-v|vSTB1,4243,328-v,vSTB1,Term controls
+328-v|vSTB2,897,328-v,vSTB2,Term controls
+328-v|vTcell,60,328-v,vTcell,Term controls
+328-v|vVEC,82,328-v,vVEC,Term controls
+372-v|vCTB,66,372-v,vCTB,Term controls
+372-v|vHBC,84,372-v,vHBC,Term controls
+372-v|vSTB1,3100,372-v,vSTB1,Term controls
+372-v|vSTB2,1000,372-v,vSTB2,Term controls
+372-v|vSTBjuv,106,372-v,vSTBjuv,Term controls
+372-v|vTcell,68,372-v,vTcell,Term controls
+372-v|vVEC,85,372-v,vVEC,Term controls
+389-v|vHBC,74,389-v,vHBC,eoPE
+389-v|vSTB1,3417,389-v,vSTB1,eoPE
+389-v|vSTB2,2332,389-v,vSTB2,eoPE
+419-v|PAMM,116,419-v,PAMM,eoPE
+419-v|vCTB,74,419-v,vCTB,eoPE
+419-v|vHBC,97,419-v,vHBC,eoPE
+419-v|vSTB1,3475,419-v,vSTB1,eoPE
+419-v|vSTB2,1308,419-v,vSTB2,eoPE
+419-v|vTcell,241,419-v,vTcell,eoPE
+577-1-v|vCTB,128,577-1-v,vCTB,eoPE
+577-1-v|vHBC,103,577-1-v,vHBC,eoPE
+577-1-v|vMC,59,577-1-v,vMC,eoPE
+577-1-v|vSTB1,4269,577-1-v,vSTB1,eoPE
+577-1-v|vSTB2,1248,577-1-v,vSTB2,eoPE
+577-1-v|vSTBjuv,226,577-1-v,vSTBjuv,eoPE
+577-1-v|vVEC,119,577-1-v,vVEC,eoPE
+577-2-v|vCTB,119,577-2-v,vCTB,eoPE
+577-2-v|vHBC,119,577-2-v,vHBC,eoPE
+577-2-v|vMC,56,577-2-v,vMC,eoPE
+577-2-v|vSTB1,3847,577-2-v,vSTB1,eoPE
+577-2-v|vSTB2,1587,577-2-v,vSTB2,eoPE
+577-2-v|vSTBjuv,211,577-2-v,vSTBjuv,eoPE
+577-2-v|vVEC,121,577-2-v,vVEC,eoPE
+M181-v|PAMM,60,M181-v,PAMM,eoPE
+M181-v|vCTB,84,M181-v,vCTB,eoPE
+M181-v|vFB,54,M181-v,vFB,eoPE
+M181-v|vHBC,69,M181-v,vHBC,eoPE
+M181-v|vMC,52,M181-v,vMC,eoPE
+M181-v|vSTB1,3913,M181-v,vSTB1,eoPE
+M181-v|vSTB2,1112,M181-v,vSTB2,eoPE
+M181-v|vSTBjuv,318,M181-v,vSTBjuv,eoPE
+M181-v|vTcell,62,M181-v,vTcell,eoPE
+M181-v|vVEC,129,M181-v,vVEC,eoPE
+PLA120-v|vCTB,111,PLA120-v,vCTB,eoPE
+PLA120-v|vFB,307,PLA120-v,vFB,eoPE
+PLA120-v|vHBC,205,PLA120-v,vHBC,eoPE
+PLA120-v|vMC,77,PLA120-v,vMC,eoPE
+PLA120-v|vSTB1,4683,PLA120-v,vSTB1,eoPE
+PLA120-v|vSTB2,872,PLA120-v,vSTB2,eoPE
+PLA120-v|vVEC,127,PLA120-v,vVEC,eoPE
+TRM1-v|PAMM,236,TRM1-v,PAMM,Term controls
+TRM1-v|vCTB,220,TRM1-v,vCTB,Term controls
+TRM1-v|vFB,114,TRM1-v,vFB,Term controls
+TRM1-v|vHBC,342,TRM1-v,vHBC,Term controls
+TRM1-v|vMC,55,TRM1-v,vMC,Term controls
+TRM1-v|vSTB1,3677,TRM1-v,vSTB1,Term controls
+TRM1-v|vSTB2,808,TRM1-v,vSTB2,Term controls
+TRM1-v|vSTBjuv,127,TRM1-v,vSTBjuv,Term controls
+TRM1-v|vTcell,415,TRM1-v,vTcell,Term controls
+TRM1-v|vVEC,85,TRM1-v,vVEC,Term controls
+TRM2-v|vCTB,156,TRM2-v,vCTB,Term controls
+TRM2-v|vFB,55,TRM2-v,vFB,Term controls
+TRM2-v|vHBC,233,TRM2-v,vHBC,Term controls
+TRM2-v|vMC,81,TRM2-v,vMC,Term controls
+TRM2-v|vSTB1,2615,TRM2-v,vSTB1,Term controls
+TRM2-v|vSTB2,456,TRM2-v,vSTB2,Term controls
+TRM2-v|vSTBjuv,186,TRM2-v,vSTBjuv,Term controls
+TRM2-v|vTcell,79,TRM2-v,vTcell,Term controls
+TRM2-v|vVEC,205,TRM2-v,vVEC,Term controls
+TRM3-v|vCTB,259,TRM3-v,vCTB,Term controls
+TRM3-v|vHBC,297,TRM3-v,vHBC,Term controls
+TRM3-v|vMC,94,TRM3-v,vMC,Term controls
+TRM3-v|vSTB1,2184,TRM3-v,vSTB1,Term controls
+TRM3-v|vSTB2,442,TRM3-v,vSTB2,Term controls
+TRM3-v|vSTBjuv,66,TRM3-v,vSTBjuv,Term controls
+TRM3-v|vTcell,122,TRM3-v,vTcell,Term controls
+TRM3-v|vVEC,227,TRM3-v,vVEC,Term controls

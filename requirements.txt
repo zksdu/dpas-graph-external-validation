@@ -1,0 +1,16 @@
+# Core scientific stack (evaluation, aggregation, figures, audit)
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+
+# Single-cell / spatial analyses (placenta & decidua application)
+anndata>=0.10
+scanpy>=1.10
+
+# Deep learning (training and DGAT comparison only)
+torch>=2.2
+torch_geometric>=2.5
+
+# R-side preprocessing (Seurat exports) requires R >= 4.3 with Seurat;
+# see scripts/export_pe_visium.R and scripts/inspect_pe_rds.R
