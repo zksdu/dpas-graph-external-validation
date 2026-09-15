@@ -97,9 +97,13 @@ ax.plot(lim, lim, "k--", lw=0.8, zorder=2)
 ax.set_xlim(lim); ax.set_ylim(lim)
 ax.set_xlabel("ridge on PCA-50 (mean external ρ)")
 ax.set_ylabel("DGAT (mean external ρ)")
+# 标签逐点避让：PAX5/CXCR5 两点几乎重合，分别向左上/右下错开；CD4 放点下方防压点
+offsets = {"PAX5": (-34, 4), "CXCR5": (-36, -8), "PDCD1": (0, 8),
+           "MS4A1": (3, 3), "CD4": (-6, -12), "CD8A": (5, 4)}
 for p in ["PAX5", "CXCR5", "PDCD1", "MS4A1", "CD4", "CD8A"]:
-    ax.annotate(p, (ridge_m[p], dgat_m[p]), fontsize=6, xytext=(3, 3),
-                textcoords="offset points")
+    ax.annotate(p, (ridge_m[p], dgat_m[p]), fontsize=6,
+                xytext=offsets[p], textcoords="offset points",
+                ha="center" if p in ("PAX5", "CD4", "PDCD1", "CXCR5") else "left")
 nwin_ref = int((dgat_m[markers] - ridge_m[markers] > 0).sum())
 ax.set_title(f"C  Reference pipeline: DGAT vs ridge ({nwin_ref}/31 to DGAT)",
              fontsize=8.5, loc="left")
