@@ -49,9 +49,9 @@ nof_m = nof.groupby(["sample", "protein"]).spearman.mean().reset_index().groupby
 dpas_seed0 = float(ms[ms.seed == 0].spear_marker_mean.iloc[0])
 dpas_3seed = (float(ms.spear_marker_mean.mean()), float(ms.spear_marker_mean.std(ddof=1)))
 
-fig = plt.figure(figsize=(7.2, 9.2))
+fig = plt.figure(figsize=(7.2, 9.9))
 fig.suptitle("Architecture comparison under the identical external protocol", fontsize=9.5, y=0.995)
-gs = fig.add_gridspec(3, 2, hspace=0.62, wspace=0.42)
+gs = fig.add_gridspec(3, 2, height_ratios=[0.8, 1.2, 1.2], hspace=0.58, wspace=0.42)
 
 # A: 3-seed stability at 100 epochs
 ax = fig.add_subplot(gs[0, 0])
@@ -114,7 +114,8 @@ diff = (dgat_m[markers] - ridge_m[markers]).sort_values()
 ax.barh(range(len(diff)), diff.values, color=[gcol(p) for p in diff.index],
         height=0.72, zorder=3)
 ax.set_yticks(range(len(diff)))
-ax.set_yticklabels(diff.index, fontsize=5.5)
+ax.set_yticklabels(diff.index, fontsize=5)
+ax.tick_params(axis="y", pad=1, length=1.5)
 ax.axvline(0, color="k", lw=0.8)
 ax.set_xlabel("DGAT − ridge  (Spearman)")
 ax.set_title(f"D  DGAT wins {nwin_ref} of 31 markers vs ridge", fontsize=8.5, loc="left")
@@ -154,7 +155,8 @@ diff_m = (nof_m[markers] - ridge_m[markers]).sort_values()
 ax.barh(range(len(diff_m)), diff_m.values, color=[gcol(p) for p in diff_m.index],
         height=0.72, zorder=3)
 ax.set_yticks(range(len(diff_m)))
-ax.set_yticklabels(diff_m.index, fontsize=5.5)
+ax.set_yticklabels(diff_m.index, fontsize=5)
+ax.tick_params(axis="y", pad=1, length=1.5)
 ax.axvline(0, color="k", lw=0.8)
 ax.set_xlabel("DGAT (matched) − ridge  (Spearman)")
 nwin_m = int((diff_m > 0).sum())
