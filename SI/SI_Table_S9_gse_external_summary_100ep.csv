@@ -1,0 +1,17 @@
+mode,holdout,sample,n,PCC,SP,spotPCC,isoSP,base
+proc,holdout_tonsil,A1LN,3394,+0.116,+0.191,+0.785,+0.062,+0.096
+proc,holdout_tonsil,A1TNSL,4329,+0.130,+0.191,+0.783,+0.093,+0.226
+proc,holdout_tonsil,D1LN,3024,+0.174,+0.190,+0.796,+0.031,+0.081
+proc,holdout_tonsil,D1TNSL,4503,+0.164,+0.213,+0.775,+0.111,+0.215
+proc,holdout_breast_cancer,A1LN,3394,+0.101,+0.170,+0.832,+0.151,+0.096
+proc,holdout_breast_cancer,A1TNSL,4329,+0.336,+0.385,+0.868,+0.103,+0.226
+proc,holdout_breast_cancer,D1LN,3024,+0.177,+0.195,+0.845,+0.111,+0.081
+proc,holdout_breast_cancer,D1TNSL,4503,+0.369,+0.393,+0.861,+0.128,+0.215
+raw,holdout_tonsil,A1LN,3394,+0.078,+0.137,+0.531,+0.117,+0.096
+raw,holdout_tonsil,A1TNSL,4329,+0.132,+0.202,+0.681,+0.105,+0.226
+raw,holdout_tonsil,D1LN,3024,+0.094,+0.121,+0.531,+0.080,+0.081
+raw,holdout_tonsil,D1TNSL,4503,+0.121,+0.188,+0.670,+0.094,+0.215
+raw,holdout_breast_cancer,A1LN,3394,+0.065,+0.153,+0.620,-0.001,+0.096
+raw,holdout_breast_cancer,A1TNSL,4329,+0.300,+0.358,+0.819,+0.085,+0.226
+raw,holdout_breast_cancer,D1LN,3024,+0.123,+0.161,+0.661,-0.020,+0.081
+raw,holdout_breast_cancer,D1TNSL,4503,+0.327,+0.360,+0.812,+0.103,+0.215

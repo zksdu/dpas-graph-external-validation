@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""论文草稿关键数字一致性校验：自动从存档表格核对 Results/Methods 引用的数字。
-输出 PASS/FAIL 清单 -> results/paper_number_audit.md
+"""Manuscript number-consistency audit: recomputes every number cited in Results/Methods from archived result tables.
+Writes a PASS/FAIL checklist -> results/paper_number_audit.md
 """
 import os
 import glob
@@ -109,7 +109,7 @@ if aucs:
 ct = pd.read_csv("results/dec_de_celltypes.csv")
 L.append(("decidua tested celltypes", "11", len(ct), "PASS" if len(ct) == 11 else "**FAIL**"))
 d = pd.read_csv("results/dec_de_dNK1.csv").dropna(subset=["q"])
-chk("decidua dNK1 min q (仅dNK1; 全局min=0.099见v2.2项)", d.q.min(), 0.276, tol=0.005)
+chk("decidua dNK1 min q (dNK1 only; global min=0.099 see item 14)", d.q.min(), 0.276, tol=0.005)
 
 # ---- 7. 区室蛋白增量（model − baseline，外部 4 样本均值）----
 ive = pd.read_csv("results/internal_vs_external_per_protein.csv")
@@ -121,13 +121,13 @@ for prot, want in [("ACTA2", 0.336), ("PECAM1", 0.249), ("PTPRC_2", 0.186),
     chk(f"delta {prot}", extp.loc[prot, "delta"], want, tol=0.005)
 # 同口径基线比较（24 个有 namesake 基因的蛋白）
 both = extp.dropna()
-chk("同口径 model SP (24 蛋白)", both.model_spear.mean(), 0.144, tol=0.002)
-chk("同口径 baseline SP (24 蛋白)", both.baseline_spear.mean(), 0.155, tol=0.002)
+chk("matched-basis model SP (24 proteins)", both.model_spear.mean(), 0.144, tol=0.002)
+chk("matched-basis baseline SP (24 proteins)", both.baseline_spear.mean(), 0.155, tol=0.002)
 from scipy.stats import wilcoxon  # noqa: E402
 
 _wp = wilcoxon(both.model_spear, both.baseline_spear).pvalue
-chk("namesake 配对 Wilcoxon p", float(_wp), 0.705, tol=0.01)
-L.append(("namesake 配对方向 (model 胜/负)", "10/14",
+chk("namesake paired Wilcoxon p", float(_wp), 0.705, tol=0.01)
+L.append(("namesake paired direction (model wins/losses)", "10/14",
           f"{int((both.delta > 0).sum())}/{int((both.delta < 0).sum())}",
           "PASS" if int((both.delta > 0).sum()) == 10 else "**FAIL**"))
 # base seeds 的 31-marker 均值跨 seed SD（Q3 宽松 SD 0.03 的实测依据）
@@ -138,9 +138,9 @@ for _fold, _want in [("holdout_tonsil", 0.024), ("holdout_breast_cancer", 0.016)
     for _run in sorted(_glob.glob(f"runs/designB/base_seed*/ckpt/{_fold}/per_protein_metrics.csv")):
         _df = pd.read_csv(_run)
         _v.append(_df[~_df.protein.str.startswith(("mouse_", "rat_"))].spearman.mean())
-    chk(f"base seeds 31-marker 均值 SD ({_fold.replace('holdout_', '')})",
+    chk(f"base seeds 31-marker mean SD ({_fold.replace('holdout_', '')})",
         float(pd.Series(_v).std(ddof=1)), _want, tol=0.005)
-L.append(("有 namesake 基因的蛋白数", "24", int(len(both)),
+L.append(("proteins with a namesake gene", "24", int(len(both)),
           "PASS" if len(both) == 24 else "**FAIL**"))
 
 # ---- 7b. RNA 覆盖诊断（Results §7 / Discussion §2）----
@@ -241,8 +241,8 @@ j = pd.concat([ridge_pp.rename("ridge"), dpas_pp.rename("dpas")], axis=1).dropna
 wins = int((j.ridge > j.dpas).sum())
 L.append(("ridge wins vs DPAS-20ep", "30/31", f"{wins}/{len(j)}",
           "PASS" if wins == 30 and len(j) == 31 else "**FAIL**"))
-chk("ridge VIM (唯一例外)", float(j.loc["VIM", "ridge"]), 0.360)
-chk("DPAS-20ep VIM (唯一例外)", float(j.loc["VIM", "dpas"]), 0.448)
+chk("ridge VIM (sole exception)", float(j.loc["VIM", "ridge"]), 0.360)
+chk("DPAS-20ep VIM (sole exception)", float(j.loc["VIM", "dpas"]), 0.448)
 jn = pd.concat([ridge_pp.rename("ridge"),
                 ive[ive["set"] == "外部 GSE"].groupby("protein")["baseline_spear"].mean()],
                axis=1).dropna()
@@ -262,9 +262,9 @@ for prot, want in [("ITGAX", -0.111), ("MS4A1", -0.076), ("PTPRC_2", -0.076),
                    ("PCNA", -0.068), ("PTPRC_1", -0.067), ("ACTA2", 0.015),
                    ("EPCAM", -0.005), ("CD3E", -0.029), ("PECAM1", -0.053)]:
     chk(f"designC meanΔ {prot}", float(imp[imp.dropped == prot].mean_delta.iloc[0]), want)
-chk("designC ACTA2 ΔSP(区室)", float(imp[imp.dropped == "ACTA2"].mean_delta_comp.iloc[0]), 0.079)
-chk("designC ACTA2 ΔSP(淋巴)", float(imp[imp.dropped == "ACTA2"].mean_delta_lymph.iloc[0]), -0.061)
-chk("designC PECAM1 ΔSP(区室)", float(imp[imp.dropped == "PECAM1"].mean_delta_comp.iloc[0]), -0.161)
+chk("designC ACTA2 delta-SP (compartment)", float(imp[imp.dropped == "ACTA2"].mean_delta_comp.iloc[0]), 0.079)
+chk("designC ACTA2 delta-SP (lymphoid)", float(imp[imp.dropped == "ACTA2"].mean_delta_lymph.iloc[0]), -0.061)
+chk("designC PECAM1 delta-SP (compartment)", float(imp[imp.dropped == "PECAM1"].mean_delta_comp.iloc[0]), -0.161)
 
 # ---- 12. 100ep 多 seed（Results "Training budget"、Discussion limitations）----
 ms = pd.read_csv("results/lodo100ep_multiseed_summary.csv", index_col="seed")
@@ -306,7 +306,7 @@ intp2 = pd.read_csv("results/internal_vs_external_per_protein.csv")
 for _fold, _w in [("tonsil", 0.071), ("breast_cancer", 0.224)]:
     _d = intp2[(intp2["set"] == "内部 LODO") & (intp2["sample"] == _fold)]
     _m = ~_d.protein.str.startswith(("mouse_", "rat_"))
-    chk(f"内部 LODO {_fold} 31-marker Spearman", float(_d[_m].model_spear.mean()), _w, tol=0.002)
+    chk(f"Internal LODO {_fold} 31-marker Spearman", float(_d[_m].model_spear.mean()), _w, tol=0.002)
 # (2) 蜕膜全局最小 q（旧稿 0.276 仅为 dNK1；全局为 dNK2 的 0.099）
 _allq2 = []
 for _f in glob.glob("results/dec_de_*.csv"):
@@ -315,48 +315,48 @@ for _f in glob.glob("results/dec_de_*.csv"):
         _d = _d.dropna(subset=["q"])
         if len(_d):
             _allq2.append(float(_d.q.min()))
-chk("蜕膜全局 min q (11 类, dNK2)", float(np.min(_allq2)), 0.099, tol=0.002)
+chk("decidua global min q (11 cell types, dNK2)", float(np.min(_allq2)), 0.099, tol=0.002)
 # (3) niche eta2 中位数（预处理修正后的预测；旧稿 0.101/0.081/0.105/0.083 为修正前旧版）
 for _sec, _wi, _wr in [("A", 0.431, 0.395), ("B", 0.524, 0.588)]:
     _kw = pd.read_csv(f"results/niche2_section{_sec}_kw_adj.csv")
     _neg = _kw[_kw.is_negctrl.astype(bool)] if _kw.is_negctrl.dtype == bool else _kw[_kw.is_negctrl.astype(str) == "True"]
     _real = _kw[~(_kw.is_negctrl.astype(bool) if _kw.is_negctrl.dtype == bool else _kw.is_negctrl.astype(str) == "True")]
-    chk(f"niche eta2 中位数 对照 {_sec}", float(_neg.eta2.median()), _wi)
-    chk(f"niche eta2 中位数 真实 {_sec}", float(_real.eta2.median()), _wr)
+    chk(f"niche eta2 median controls {_sec}", float(_neg.eta2.median()), _wi)
+    chk(f"niche eta2 median real {_sec}", float(_real.eta2.median()), _wr)
 
 # ---- 15. MLP 基线与 RNA 覆盖 Wilcoxon（2026-09-14 扩项）----
 _mlp = pd.read_csv("results/mlp_baseline_summary.csv")
 _m1 = _mlp[_mlp.model == "mlp_64"].iloc[0]
 _m2_ = _mlp[_mlp.model == "mlp_64_32"].iloc[0]
-chk("MLP(64) 三 seed 均值", float(_m1.sp_mean), 0.346, tol=0.002)
-chk("MLP(64) 三 seed SD", float(_m1.sp_sd), 0.015, tol=0.002)
-chk("MLP(64,32) 三 seed 均值", float(_m2_.sp_mean), 0.335, tol=0.002)
-chk("MLP(64,32) 三 seed SD", float(_m2_.sp_sd), 0.016, tol=0.002)
+chk("MLP(64) three-seed mean", float(_m1.sp_mean), 0.346, tol=0.002)
+chk("MLP(64) three-seed SD", float(_m1.sp_sd), 0.015, tol=0.002)
+chk("MLP(64,32) three-seed mean", float(_m2_.sp_mean), 0.335, tol=0.002)
+chk("MLP(64,32) three-seed SD", float(_m2_.sp_sd), 0.016, tol=0.002)
 _wil = pd.read_csv("results/rna_coverage_wilcoxon.csv")
 _p1 = float(_wil[(_wil.scope == "pooled") & (_wil.variable == "detect_rate")].p.iloc[0])
 _p2 = float(_wil[(_wil.scope == "pooled") & (_wil.variable == "mean_expr")].p.iloc[0])
-chk("RNA覆盖 检出率 Wilcoxon p (pooled)", _p1, 0.66, tol=0.005)
-chk("RNA覆盖 表达量 Wilcoxon p (pooled)", _p2, 0.51, tol=0.005)
+chk("RNA coverage detection-rate Wilcoxon p (pooled)", _p1, 0.66, tol=0.005)
+chk("RNA coverage mean-expression Wilcoxon p (pooled)", _p2, 0.51, tol=0.005)
 
 # ---- 16. DGAT 统一 spot 集（2026-09-14 GPU 重跑）----
 _nf = pd.read_csv("results_server_final/dgat_uniformqc/dgat_nofilter_gse_per_protein.csv")
 _nf_m = _nf[~_nf.protein.str.startswith(("mouse_", "rat_"))]
-chk("DGAT 统一 spot 集 31-marker 总均值", float(_nf_m.spearman.mean()), 0.240, tol=0.002)
+chk("DGAT matched-spot 31-marker overall mean", float(_nf_m.spearman.mean()), 0.240, tol=0.002)
 for _fd, _w in [("holdout_tonsil", 0.227), ("holdout_breast_cancer", 0.253)]:
-    chk(f"DGAT 统一 spot 集 {_fd} 折均值", float(_nf_m[_nf_m.fold == _fd].spearman.mean()), _w, tol=0.002)
+    chk(f"DGAT matched-spot {_fd} fold mean", float(_nf_m[_nf_m.fold == _fd].spearman.mean()), _w, tol=0.002)
 _p5 = pd.read_csv("results_server_final/dgat_uniformqc/dgat_panel500_gse_per_protein.csv")
-chk("DGAT panel内500 中间变体总均值", float(_p5[~_p5.protein.str.startswith(("mouse_", "rat_"))].spearman.mean()), 0.306, tol=0.002)
+chk("DGAT panel-internal-500 intermediate variant overall mean", float(_p5[~_p5.protein.str.startswith(("mouse_", "rat_"))].spearman.mean()), 0.306, tol=0.002)
 _ridge = pd.read_csv("results/competitor_benchmark_per_protein.csv")
 _rp = _ridge[_ridge.model == "ridge_pc"].groupby("protein").spearman.mean()
 _dg = _nf_m.groupby("protein").spearman.mean()
 _j = pd.concat([_rp.rename("ridge"), _dg.rename("dgat")], axis=1).dropna()
 _n_win = int((_j.dgat > _j.ridge).sum())
-L.append(("DGAT 统一 spot 集 胜 ridge 标志物数", "4/31", f"{_n_win}/31",
+L.append(("DGAT matched-spot markers beating ridge", "4/31", f"{_n_win}/31",
           "PASS" if _n_win == 4 else "**FAIL**"))
 
 # ---- 输出 ----
-out = ["# 论文数字一致性审计（自动）", "",
-       "| 数字 | 草稿引用值 | 实测值 | 判定 |", "|---|---|---|---|"]
+out = ["# Manuscript number-consistency audit (automated)", "",
+       "| # | Manuscript value | Recomputed | Verdict |", "|---|---|---|---|"]
 fails = 0
 for name, w, g, s in L:
     gs = f"{g:.4f}" if isinstance(g, float) else str(g)
