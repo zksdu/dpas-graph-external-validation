@@ -14,6 +14,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.patheffects as pe
 
 matplotlib.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "DejaVu Sans"]
 matplotlib.rcParams["axes.unicode_minus"] = False
@@ -81,12 +82,16 @@ for ax, (title, fold) in zip(axes, FOLDS):
         s = s.sort_values("x")
         yerr = s["std"].to_numpy(dtype=float).copy()
         yerr[np.isnan(yerr)] = 0.0
+        # 标签避线：红（区室，线在上）放点上方，蓝（淋巴亚型）放点下方；白色描边垫底防穿透
+        off = (0, 9) if gname == "compartment" else (0, -14)
+        halo = [pe.withStroke(linewidth=1.8, foreground="white")]
         ax.errorbar(s.x, s.sp_mean, yerr=yerr, marker="o", ms=7, lw=2.2,
                     capsize=4, color=colors[gname], label=labels[gname])
         for _, r in s.iterrows():
             ax.annotate(f"{r.sp_mean:.3f}", (r.x, r.sp_mean),
-                        textcoords="offset points", xytext=(0, 9),
-                        ha="center", fontsize=6, color=colors[gname])
+                        textcoords="offset points", xytext=off,
+                        ha="center", fontsize=6, color=colors[gname],
+                        path_effects=halo, zorder=6)
     ax.axhline(0, color="#999999", lw=0.8, ls=":")
     ax.set_xticks([0, 1, 2])
     ax.set_xticklabels(["35 markers\n(4 seeds, 20 ep)",
@@ -94,6 +99,12 @@ for ax, (title, fold) in zip(axes, FOLDS):
     ax.set_title(title, fontsize=8)
     ax.set_xlabel("Antibody panel size")
     ax.set_xlim(-0.35, 2.35)
+    # 上下留白，保证标签和图例不顶到边框
+    ymax = (stat[stat.fold == fold]["sp_mean"] +
+            stat[stat.fold == fold]["std"].fillna(0)).max()
+    ymin = (stat[stat.fold == fold]["sp_mean"] -
+            stat[stat.fold == fold]["std"].fillna(0)).min()
+    ax.set_ylim(ymin - 0.10, ymax + 0.12)
 
 axes[0].set_ylabel("Group-mean per-protein Spearman\n(seed mean ± SD)")
 axes[0].legend(loc="upper left", fontsize=6.5, frameon=False)
