@@ -126,7 +126,9 @@ rc = pd.read_csv("results/rna_coverage_diagnosis.csv")
 mk = {"tonsil": "o", "breast": "^"}
 for ds, sub in rc.groupby("dataset"):
     for gname, c in [("compartment", C_COMP), ("lymph_subtype", C_LYMPH)]:
-        s2 = sub[(sub.group == gname) & (sub.in_panel.astype(str) == "True")]
+        key = "lymph" if gname == "lymph_subtype" else gname  # rna_coverage_diagnosis.csv 用 "lymph"
+        s2 = sub[(sub.group == key) & (sub.in_panel.astype(str) == "True")]
+        assert len(s2) > 0, f"empty subset: {ds}/{gname} (key={key})"
         ax.scatter(s2.mean_expr, s2.detect_rate, s=30, c=c, marker=mk.get(ds, "o"),
                    alpha=0.75, edgecolor="w", linewidth=0.3, zorder=3,
                    label=f"{gname}, {ds}")
