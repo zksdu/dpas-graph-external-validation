@@ -55,7 +55,7 @@ DGAT_panel_31.txt         the frozen 31-marker evaluation panel (verbatim for bo
 ## Environment
 
 Training was performed on a single NVIDIA RTX 6000-class GPU (CUDA 12.x) with
-Python 3.10; the model environment is documented in `DPAS-Graph/environment.yml`.
+Python 3.12 (local 20-epoch experiments: Python 3.13); the model environment is documented in `DPAS-Graph/environment.yml`.
 Core dependencies for evaluation / figures / audit:
 
 ```
